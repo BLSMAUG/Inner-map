@@ -2,27 +2,25 @@ using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Inventaire : MonoBehaviour
 {
     //Liste des slots de l'inventaire
+    private int slotCount;
+
     [SerializeField]
-    private GameObject slot1;
-    [SerializeField] 
-    private GameObject slot2;
-    [SerializeField] 
-    private GameObject slot3;
-    [SerializeField] 
-    private GameObject slot4;
-
-    private int slotCount = 4;
-
     private List<GameObject> slots = new List<GameObject>();
     private List<ClassItem> inventaire = new List<ClassItem>();
 
     private ClassItem classItem;
     private int nextFreeSlot = 0;
+
+    [SerializeField]
+    private GameObject ItemPrefab;
+
+    [SerializeField]
+    private Transform Canva;
 
     //POUR TESTER: a mettre en commentaire plus tard
     [SerializeField]
@@ -32,11 +30,7 @@ public class Inventaire : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        slots.Add(slot1);
-        slots.Add(slot2);
-        slots.Add(slot3);
-        slots.Add(slot4);
-
+        slotCount = slots.Count;
         //TEST DE LA FONCTION
         AddToInventory(itemVisé);
     }
@@ -49,13 +43,20 @@ public class Inventaire : MonoBehaviour
 
     public void AddToInventory(GameObject item)
     {
-       ClassItem classItem = item.GetComponent<ClassItem>();
-       Sprite icone = classItem.itemIcon;
+       ClassItem objectClassItem = item.GetComponent<ClassItem>();
+       //Sprite icone = classItem.itemIcon;
        if (inventaire.Count < slotCount)
         {
             inventaire.Add(classItem);
-            item.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<Transform>().position;
+            //Créer objet sprite à partir du sprite stocké dan sl'objet
+            GameObject icone = Instantiate(ItemPrefab, Canva);
+            icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
+            icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
             nextFreeSlot = nextFreeSlot + 1;
+        }
+        else
+        {
+            Debug.Log("No free inventory slots left");
         }
     }
 }
