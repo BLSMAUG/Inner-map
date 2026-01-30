@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 5f;
+    [SerializeField]
+    private float speedWalk;
+
 
     CharacterController Cac;
 
@@ -32,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
         move = Vector3.ClampMagnitude(move, 1f);
 
-        Cac.Move(move * speed * Time.deltaTime);
+        Cac.Move(move * speedWalk * Time.deltaTime);
 
     }
 }
