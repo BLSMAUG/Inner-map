@@ -3,6 +3,8 @@ using UnityEngine;
 public class PlayerRaycast : MonoBehaviour
 {
     public float playerReach;
+    public string hitName;
+    private Inventaire inventaire;
     void Start()
     {
 
@@ -29,6 +31,8 @@ public class PlayerRaycast : MonoBehaviour
                 if (hitInfo.transform.tag == "Objet")
                 {
                     Debug.Log("Hit the object");
+                    hitName = hitInfo.collider.gameObject.name;
+                    inventaire.AddToInventory(hitName);
                 }
             }
         }

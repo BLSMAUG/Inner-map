@@ -9,6 +9,10 @@ public class ClassItem : MonoBehaviour
     public string itemDescription;
     [SerializeField]
     public Sprite itemIcon;
+    [SerializeField]
+    public bool isReachable=true;
+    [SerializeField]
+    public bool isInInventory = true;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

@@ -3,6 +3,8 @@ using NUnit.Framework;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEditor.Progress;
+using static UnityEngine.Rendering.VolumeComponent;
 
 public class Inventaire : MonoBehaviour
 {
@@ -11,7 +13,10 @@ public class Inventaire : MonoBehaviour
 
     [SerializeField]
     private List<GameObject> slots = new List<GameObject>();
+    [SerializeField]
     private List<ClassItem> inventaire = new List<ClassItem>();
+    [SerializeField]
+    private List<GameObject> objects = new List<GameObject>();
 
     private ClassItem classItem;
     private int nextFreeSlot = 0;
@@ -32,31 +37,39 @@ public class Inventaire : MonoBehaviour
     {
         slotCount = slots.Count;
         //TEST DE LA FONCTION
-        AddToInventory(itemVisé);
+        //AddToInventory(itemVisé);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        //AddToInventory(GameObject PlayerRaycast.hitObject);
     }
 
-    public void AddToInventory(GameObject item)
+    public void AddToInventory(string itemName)
     {
-       ClassItem objectClassItem = item.GetComponent<ClassItem>();
-       //Sprite icone = classItem.itemIcon;
-       if (inventaire.Count < slotCount)
+        for(int i = 0; i < objects.Count; i++)
         {
-            inventaire.Add(classItem);
-            //Créer objet sprite à partir du sprite stocké dan sl'objet
-            GameObject icone = Instantiate(ItemPrefab, Canva);
-            icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
-            icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
-            nextFreeSlot = nextFreeSlot + 1;
+            if (objects[i].name == itemName)
+            {
+                ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
+                if (inventaire.Count < slotCount)
+                {
+                    Destroy(GameObject.Find(itemName));
+                    inventaire.Add(objectClassItem);
+                    //Créer objet sprite à partir du sprite stocké dan sl'objet
+                    GameObject icone = Instantiate(ItemPrefab, Canva);
+                    icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
+                    icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
+                    nextFreeSlot = nextFreeSlot + 1;
+                }
+                else
+                {
+                    Debug.Log("No free inventory slots left");
+                }
+            }
+            break;
         }
-        else
-        {
-            Debug.Log("No free inventory slots left");
-        }
+        
     }
 }
