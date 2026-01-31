@@ -11,6 +11,8 @@ public class PlayerRaycast : MonoBehaviour
     public string hitObjectName;
     public Inventaire inventaire;
 
+    static public bool eKeyState = false;
+
     public bool isOnConcrete;
 
     public bool isOnHerbe;
@@ -27,6 +29,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         Raycast();
         InterractionDialogue();
+        InterractKey();
     }
 
     //void FixedUpdate()
@@ -58,7 +61,6 @@ public class PlayerRaycast : MonoBehaviour
                         Destroy(GameObject.Find(hitObjectName));
                         inventaire.AddToInventory(hitName);
                     }
-                    
                 }
             }
         }
@@ -97,22 +99,34 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("interraction lanc�e");
+                        Debug.Log("interraction lancée");
                         Dialogues.isInDialogue = true;
-                        //monTexte = Dialogues.ligneDialogue;
-                        //Dialogues.textField.GetComponent<Text>().text = monTexte;
-                        //monTexte = "au revoir";
-                        //Dialogues.textField.GetComponent<Text>().text = "monTexte";
-
                     }
                     break;
                 }
             }
+        }
+    }
 
+    public void InterractKey()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
+        {
+            if (hitInfo.transform.tag == "Objet")
+            {
+                eKeyState = true;
+            }
             else
             {
-                //Debug.Log("Rien");
+                eKeyState = false;
             }
+        }
+        else
+        {
+            eKeyState = false;
         }
     }
 
