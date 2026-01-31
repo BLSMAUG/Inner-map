@@ -14,10 +14,7 @@ public class PlayerRaycast : MonoBehaviour
     static public bool eKeyState = false;
 
     public bool isOnConcrete;
-
     public bool isOnHerbe;
-
-    static public string monTexte = "au revoir";
 
     void Start()
     {

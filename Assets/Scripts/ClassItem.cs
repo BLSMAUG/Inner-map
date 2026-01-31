@@ -13,6 +13,10 @@ public class ClassItem : MonoBehaviour
     public bool isReachable=true;
     [SerializeField]
     public bool isInInventory = false;
+    [SerializeField]
+    public int itemIndex;
+
+    static public int hitIndex;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +27,16 @@ public class ClassItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SwapIndex();
+    }
 
+    public void SwapIndex()
+    {
+        if (Dialogues.isInDialogue == true)
+        {
+            hitIndex = itemIndex;
+            //Debug.Log(hitIndex);
+        }
     }
 
     private void TakeItem()

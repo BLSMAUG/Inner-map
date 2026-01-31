@@ -30,7 +30,7 @@ public class Dialogues : MonoBehaviour
 
     void Start()
     {
-        indexDialogue = 1;
+        //indexDialogue = 1;
         //ligneDialogue = DialogueList[currentDialogue][nextLine];
         //Debug.Log(ligneDialogue);
     }
@@ -46,6 +46,7 @@ public class Dialogues : MonoBehaviour
     {
         if (isInDialogue == true)
         {
+            currentDialogue = ClassItem.hitIndex;
             FirstPersonCamera.isInGame = false;
             dialogueBox.SetActive(true);
             enterKey.SetActive(true);
