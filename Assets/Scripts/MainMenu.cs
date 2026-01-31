@@ -20,6 +20,7 @@ public class MainMenu : MonoBehaviour
     {
         backgroundImage = background.GetComponent<Image>();
         StartCoroutine(MenuGlitch2());
+        FirstPersonCamera.isInGame = false;
     }
     void Update() 
     {
@@ -53,6 +54,7 @@ public class MainMenu : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene(1);
+        FirstPersonCamera.isInGame = true;
         //Modifier pour qu'on revienne à l'état de base ?
     }
 
