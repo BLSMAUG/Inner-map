@@ -28,6 +28,7 @@ public class PauseMenu : MonoBehaviour
 
             //Time.timeScale = 0f; // Le temps s'arrete
             PauseGame();
+            FirstPersonCamera.isInGame = false;
         }
 
         //else
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         pauseMenuObject.SetActive(false);
         //Time.timeScale = 1.0f;
         isPaused = !isPaused;
+        FirstPersonCamera.isInGame = true;
     }
 
     public void MainMenu()
