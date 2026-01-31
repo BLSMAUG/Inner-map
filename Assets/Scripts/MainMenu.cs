@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
@@ -20,9 +21,12 @@ public class MainMenu : MonoBehaviour
     public AudioSource glitchSound;
     [SerializeField]
     public AudioSource clickSound;
+    [SerializeField]
+    public Slider volumeSlider;
 
     void Start()
     {
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
         backgroundImage = background.GetComponent<Image>();
         StartCoroutine(MenuGlitch2());
         FirstPersonCamera.isInGame = false;
@@ -77,6 +81,7 @@ public class MainMenu : MonoBehaviour
 
     public void SetVolume(float sliderValue)
     {
-        //AudioManager.musicVolume.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("volume", sliderValue);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }

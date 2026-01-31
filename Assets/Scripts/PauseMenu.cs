@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -12,10 +13,12 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenuObject;
     [SerializeField]
     public AudioSource clickSound;
+    [SerializeField]
+    public Slider volumeSlider;
 
     void Start()
     {
-
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
     }
 
 
@@ -72,5 +75,11 @@ public class PauseMenu : MonoBehaviour
     public void QuitMenu()
     {
         Application.Quit();
+    }
+
+    public void SetVolume(float sliderValue)
+    {
+        PlayerPrefs.SetFloat("volume", sliderValue);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }
