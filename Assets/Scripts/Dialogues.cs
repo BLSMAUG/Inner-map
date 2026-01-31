@@ -13,7 +13,10 @@ public class Dialogues : MonoBehaviour
     [SerializeField]
     public GameObject dialogueBox;
     [SerializeField]
+    public GameObject enterKey;
+    [SerializeField]
     public GameObject textField;
+    
     
 
     public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, KeyDialogue};
@@ -45,6 +48,7 @@ public class Dialogues : MonoBehaviour
         {
             FirstPersonCamera.isInGame = false;
             dialogueBox.SetActive(true);
+            enterKey.SetActive(true);
             ligneDialogue = DialogueList[currentDialogue][nextLine];
             //Debug.Log(ligneDialogue);
 
@@ -70,6 +74,7 @@ public class Dialogues : MonoBehaviour
         else
         {
             dialogueBox.SetActive(false);
+            enterKey.SetActive(false);
         }
     }
     

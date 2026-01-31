@@ -35,6 +35,9 @@ public class Inventaire : MonoBehaviour
     [SerializeField]
     private GameObject itemVisé;
 
+    [SerializeField]
+    public GameObject eKey;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,8 +50,25 @@ public class Inventaire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        eKeyStatus();
         CrosshairStatus();
         //AddToInventory(PlayerRaycast.hitName);
+    }
+
+    public void eKeyStatus()
+    {
+        if (PlayerRaycast.eKeyState == true)
+        {
+            eKey.SetActive(true);
+        }
+        if (Dialogues.isInDialogue == true)
+        {
+            eKey.SetActive(false);
+        }
+        else if (PlayerRaycast.eKeyState == false)
+        {
+            eKey.SetActive(false);
+        }
     }
 
     public void CrosshairStatus()
