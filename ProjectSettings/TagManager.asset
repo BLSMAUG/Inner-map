@@ -8,6 +8,7 @@ TagManager:
   - Sword
   - Concrete
   - Herbe
+  - Stone
   layers:
   - Default
   - TransparentFX
