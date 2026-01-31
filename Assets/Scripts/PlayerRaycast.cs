@@ -6,6 +6,13 @@ public class PlayerRaycast : MonoBehaviour
     public string hitName;
     public string hitObjectName;
     public Inventaire inventaire;
+
+    [SerializeField]
+    public bool isOnConcrete;
+
+    [SerializeField]
+    public bool isOnHerbe;
+
     void Start()
     {
 
@@ -17,7 +24,7 @@ public class PlayerRaycast : MonoBehaviour
         Raycast();
     }
 
-    
+
     public void Raycast()
     {
         RaycastHit hitInfo;
@@ -44,6 +51,21 @@ public class PlayerRaycast : MonoBehaviour
                     }
                     
                 }
+            }
+        }
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        {
+            if (hitInfo.collider.CompareTag("Concrete"))
+            {
+                Debug.Log("Concrete");
+                isOnConcrete = true;
+            }
+
+            else if (hitInfo.collider.CompareTag("Herbe"))
+            {
+                Debug.Log("Herbe");
+                isOnHerbe = true;
             }
         }
     }

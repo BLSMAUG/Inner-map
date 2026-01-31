@@ -13,8 +13,8 @@ public class AudioManager : MonoBehaviour
     private AudioSource sfxSource;
 
     
-    public float musicVolume = 1f;
-    public float sfxVolume = 1f;
+    public float musicVolume;
+    public float sfxVolume;
 
     private void Awake()
     {
