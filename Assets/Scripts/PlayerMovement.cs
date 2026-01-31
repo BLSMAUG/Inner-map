@@ -5,19 +5,26 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float speedWalk;
 
-
     CharacterController Cac;
 
+    [SerializeField]
+    private AudioClip footstepLoopClip;
+
+    private bool isFootstepPlaying;
+
+    private bool isTryingToMove;
 
     void Start()
     {
         Cac = GetComponent<CharacterController>();
+        
     }
 
 
     void Update()
     {
         Move();
+        HandleFootsteps();
     }
 
     void Move()
@@ -32,9 +39,37 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
 
+        isTryingToMove = move.sqrMagnitude > 0.01f;
+
         move = Vector3.ClampMagnitude(move, 1f);
 
         Cac.Move(move * speedWalk * Time.deltaTime);
 
     }
+
+    void HandleFootsteps()
+    {
+        if (AudioManager.instance == null || footstepLoopClip == null)
+        {
+            return;
+        }
+
+        if (isTryingToMove && Cac.isGrounded)
+        {
+            if (!isFootstepPlaying)
+            {
+                AudioManager.instance.PlayLoopSFX(footstepLoopClip);
+                isFootstepPlaying = true;
+            }
+        }
+        else
+        {
+            if (isFootstepPlaying)
+            {
+                AudioManager.instance.StopLoopSFX();
+                isFootstepPlaying = false;
+            }
+        }
+    }
+
 }
