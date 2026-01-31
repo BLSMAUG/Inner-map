@@ -7,7 +7,7 @@ public class FirstPersonCamera : MonoBehaviour
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
-    bool isInGame = true;
+    static public bool isInGame = true;
 
 
     void Start()
