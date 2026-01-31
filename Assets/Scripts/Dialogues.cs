@@ -16,8 +16,11 @@ public class Dialogues : MonoBehaviour
     public GameObject enterKey;
     [SerializeField]
     public GameObject textField;
-    
-    
+
+    [SerializeField]
+    public AudioSource click_dialogue;
+
+
 
     public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, KeyDialogue};
     static public string[] StartingDialogue = new string[] { "... ... ...", "Why am i here ?", "My memories are messing with me, i can't remember." };
@@ -30,7 +33,7 @@ public class Dialogues : MonoBehaviour
 
     void Start()
     {
-        indexDialogue = 1;
+        //indexDialogue = 1;
         //ligneDialogue = DialogueList[currentDialogue][nextLine];
         //Debug.Log(ligneDialogue);
     }
@@ -46,6 +49,7 @@ public class Dialogues : MonoBehaviour
     {
         if (isInDialogue == true)
         {
+            currentDialogue = ClassItem.hitIndex;
             FirstPersonCamera.isInGame = false;
             dialogueBox.SetActive(true);
             enterKey.SetActive(true);
@@ -56,7 +60,7 @@ public class Dialogues : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                
+                click_dialogue.Play();
                 if (nextLine < DialogueList[currentDialogue].Length - 1)
                 {
                     nextLine += 1;
@@ -65,7 +69,7 @@ public class Dialogues : MonoBehaviour
                 {
                     isInDialogue = false;
                     nextLine = 0;
-                    Debug.Log("Exited dialogue");
+                    //Debug.Log("Exited dialogue");
                     FirstPersonCamera.isInGame = true;
                 }
 

@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +15,8 @@ public class PlayerRaycast : MonoBehaviour
     static public bool eKeyState = false;
 
     public bool isOnConcrete;
-
     public bool isOnHerbe;
-
-    static public string monTexte = "au revoir";
+    public bool isOnStone;
 
     void Start()
     {
@@ -67,6 +66,7 @@ public class PlayerRaycast : MonoBehaviour
 
         isOnConcrete = false;
         isOnHerbe = false;
+        isOnStone = false;
 
         if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
         {
@@ -80,6 +80,12 @@ public class PlayerRaycast : MonoBehaviour
             {
                 //Debug.Log("Herbe");
                 isOnHerbe = true;
+            }
+
+            else if (hitInfo.collider.CompareTag("Stone"))
+            {
+                //Debug.Log("Stone");
+                isOnStone = true;
             }
         }
 
