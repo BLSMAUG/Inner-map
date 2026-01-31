@@ -47,7 +47,6 @@ public class PlayerRaycast : MonoBehaviour
                         Debug.Log(hitName);
                         Destroy(GameObject.Find(hitObjectName));
                         inventaire.AddToInventory(hitName);
-
                     }
                     
                 }
