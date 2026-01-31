@@ -9,6 +9,8 @@ public class Dialogues : MonoBehaviour
     public int nextLine = 0;
     public int currentDialogue;
     public int indexDialogue;
+    [SerializeField]
+    private GameObject dialogueBox;
 
     public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, KeyDialogue};
     static public string[] StartingDialogue = new string[] { "... ... ...", "Why am i here ?", "My memories are messing with me, i can't remember." };
@@ -36,7 +38,7 @@ public class Dialogues : MonoBehaviour
         if (isInDialogue == true)
         {
             FirstPersonCamera.isInGame = false;
-            
+            dialogueBox.SetActive(true);
             
             if (Input.GetKeyDown(KeyCode.Return))
             {
@@ -54,6 +56,10 @@ public class Dialogues : MonoBehaviour
                 }
 
             }
+        }
+        else
+        {
+            dialogueBox.SetActive(false);
         }
     }
     

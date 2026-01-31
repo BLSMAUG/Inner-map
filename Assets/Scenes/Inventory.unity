@@ -610,6 +610,7 @@ MonoBehaviour:
   nextLine: 0
   currentDialogue: 0
   indexDialogue: 0
+  dialogueBox: {fileID: 958932397}
 --- !u!223 &418086795
 Canvas:
   m_ObjectHideFlags: 0
