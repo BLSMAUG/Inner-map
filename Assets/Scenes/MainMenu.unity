@@ -717,7 +717,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 528745030}
-  - component: {fileID: 528745029}
   m_Layer: 0
   m_Name: OptionsMenu
   m_TagString: Untagged
@@ -725,22 +724,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &528745029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 528745028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c52db90190bad8f45a1f1ef55bcae5a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MainMenu
-  background: {fileID: 0}
-  sprite1: {fileID: 0}
-  sprite2: {fileID: 0}
-  backgroundImage: {fileID: 0}
 --- !u!4 &528745030
 Transform:
   m_ObjectHideFlags: 0
