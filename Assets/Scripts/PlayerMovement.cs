@@ -9,15 +9,16 @@ public class PlayerMovement : MonoBehaviour
     CharacterController Cac;
 
     [SerializeField]
-    private AudioClip footstepLoopClip;
+    private AudioClip footstepConcreteLoopClip;
+
+    [SerializeField]
+    private AudioClip footstepHerbeLoopClip;
 
     private bool isFootstepPlaying;
 
     private bool isTryingToMove;
 
-    private bool isOnConcrete;
-
-    private bool isOnHerbe;
+    public PlayerRaycast playerRaycast;
 
     void Start()
     {
@@ -59,16 +60,22 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleFootsteps()
     {
-        if (AudioManager.instance == null || footstepLoopClip == null)
+        if (AudioManager.instance == null || footstepConcreteLoopClip == null)
         {
             return;
         }
 
-        if (isTryingToMove)
+        if (isTryingToMove && playerRaycast.isOnConcrete == true)
         {
-            AudioManager.instance.PlayLoopSFX(footstepLoopClip);
+            AudioManager.instance.PlayLoopSFX(footstepConcreteLoopClip);
             isFootstepPlaying = true;
-            ///Debug.Log("Play");
+            //Debug.Log("Play");
+        }
+
+        else if (isTryingToMove && playerRaycast.isOnHerbe == true)
+        {
+            AudioManager.instance.PlayLoopSFX(footstepHerbeLoopClip);
+            isFootstepPlaying = true;
         }
         else
         {
@@ -76,46 +83,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.instance.StopLoopSFX();
                 isFootstepPlaying = false;
-                ///Debug.Log("stop");
+                //Debug.Log("stop");
             }
         }
     }
-    
-
-    //void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.gameObject.tag == "Herbe")
-    //    {
-    //        Debug.Log("Herbe");
-    //        isOnHerbe = true;
-    //        Debug.Log(gameObject.tag)
-    //    }
-
-    //}
-
-    //void OnCollisionExit(Collision collision)
-    //{
-
-    //    if (collision.gameObject.tag != "Herbe")
-    //    {
-    //        Debug.Log("Pas herbe");
-    //        isOnHerbe = false;
-    //    }
-        /*else if (collision.gameObject.tag != "Gravel")
-        {
-            Debug.Log("Pas gravel");
-            isOnGravel = false;
-        }*/
-    //}
-
-    //public void TestSol()
-    //{
-    //    if (isOnConcrete == true)
-    //    {
-    //        Debug.Log("start ok");
-    //    }
-    //}
-
-
 
 }

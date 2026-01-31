@@ -1,4 +1,8 @@
+using System;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PlayerRaycast : MonoBehaviour
 {
@@ -7,22 +11,28 @@ public class PlayerRaycast : MonoBehaviour
     public string hitObjectName;
     public Inventaire inventaire;
 
-    [SerializeField]
     public bool isOnConcrete;
 
-    [SerializeField]
     public bool isOnHerbe;
+
+    static public string monTexte = "au revoir";
 
     void Start()
     {
 
     }
 
-    
+
     void Update()
     {
         Raycast();
+        InterractionDialogue();
     }
+
+    //void FixedUpdate()
+    //{
+    //    Raycast();
+    //}
 
 
     public void Raycast()
@@ -53,18 +63,55 @@ public class PlayerRaycast : MonoBehaviour
             }
         }
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        //if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        //{
+        //    if (hitInfo.collider.CompareTag("Concrete"))
+        //    {
+        //        Debug.Log("Concrete");
+        //        isOnConcrete = true;
+        //    }
+
+        //    else if (hitInfo.collider.CompareTag("Herbe"))
+        //    {
+        //        Debug.Log("Herbe");
+        //        isOnHerbe = true;
+        //    }
+        //}
+
+    }
+
+    public void InterractionDialogue()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
+
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
         {
-            if (hitInfo.collider.CompareTag("Concrete"))
+            if (hitInfo.transform.tag == "Objet")
             {
-                Debug.Log("Concrete");
-                isOnConcrete = true;
+                hitObjectName = hitInfo.collider.gameObject.name;
+                ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
+                hitName = hitObject.itemName;
+                while (hitObject.isReachable == true)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Debug.Log("interraction lanc�e");
+                        Dialogues.isInDialogue = true;
+                        //monTexte = Dialogues.ligneDialogue;
+                        //Dialogues.textField.GetComponent<Text>().text = monTexte;
+                        //monTexte = "au revoir";
+                        //Dialogues.textField.GetComponent<Text>().text = "monTexte";
+
+                    }
+                    break;
+                }
             }
 
-            else if (hitInfo.collider.CompareTag("Herbe"))
+            else
             {
-                Debug.Log("Herbe");
-                isOnHerbe = true;
+                //Debug.Log("Rien");
             }
         }
     }

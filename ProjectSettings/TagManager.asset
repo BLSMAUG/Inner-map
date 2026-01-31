@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Objet
   - Sword
+  - Concrete
+  - Herbe
   layers:
   - Default
   - TransparentFX

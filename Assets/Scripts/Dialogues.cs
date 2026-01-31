@@ -1,16 +1,20 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class Dialogues : MonoBehaviour
 {
-    public bool isInDialogue = false;
-    public string ligneDialogue;
-    public int nextLine = 0;
-    public int currentDialogue;
-    public int indexDialogue;
+    static public bool isInDialogue = false;
+    static public string ligneDialogue;
+    static public int nextLine = 0;
+    static public int currentDialogue = 0;
+    static public int indexDialogue;
     [SerializeField]
-    private GameObject dialogueBox;
+    public GameObject dialogueBox;
+    [SerializeField]
+    public GameObject textField;
+    
 
     public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, KeyDialogue};
     static public string[] StartingDialogue = new string[] { "... ... ...", "Why am i here ?", "My memories are messing with me, i can't remember." };
@@ -24,6 +28,8 @@ public class Dialogues : MonoBehaviour
     void Start()
     {
         indexDialogue = 1;
+        //ligneDialogue = DialogueList[currentDialogue][nextLine];
+        //Debug.Log(ligneDialogue);
     }
 
     void Update()
@@ -39,7 +45,11 @@ public class Dialogues : MonoBehaviour
         {
             FirstPersonCamera.isInGame = false;
             dialogueBox.SetActive(true);
-            
+            ligneDialogue = DialogueList[currentDialogue][nextLine];
+            //Debug.Log(ligneDialogue);
+
+            textField.GetComponent<Text>().text = ligneDialogue;
+
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 
@@ -67,6 +77,8 @@ public class Dialogues : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
+            textField.GetComponent<Text>().text = DialogueList[currentDialogue][nextLine];
+
             Debug.Log(nextLine);
             Debug.Log(DialogueList[currentDialogue][nextLine]);
         }
@@ -83,6 +95,9 @@ public class Dialogues : MonoBehaviour
         }
     }
 
+    public void TestInterractionDialogue()
+    {
 
+    }
 
 }
