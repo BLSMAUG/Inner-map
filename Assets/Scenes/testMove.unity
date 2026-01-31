@@ -157,8 +157,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9999999, y: 3.2600904, z: 0.9999998}
-  m_Center: {x: 0, y: 1.1300449, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &53949349
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -937,6 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera
   player: {fileID: 1473803945}
+  baseMouseSensitivity: 2
   mouseSensitivity: 2
 --- !u!114 &873699394
 MonoBehaviour:
@@ -1468,6 +1469,7 @@ GameObject:
   - component: {fileID: 1191490440}
   - component: {fileID: 1191490439}
   - component: {fileID: 1191490444}
+  - component: {fileID: 1191490445}
   m_Layer: 0
   m_Name: Personnage
   m_TagString: Player
@@ -1504,7 +1506,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speedWalk: 4
-  footstepLoopClip: {fileID: 8300000, guid: 4dd9de2f93ede45498602518c5b0f994, type: 3}
+  footstepConcreteLoopClip: {fileID: 8300000, guid: 4dd9de2f93ede45498602518c5b0f994, type: 3}
+  footstepHerbeLoopClip: {fileID: 8300000, guid: 271de9c7e7003bd4bade1329f7926b71, type: 3}
+  playerRaycast: {fileID: 1191490445}
 --- !u!143 &1191490440
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1635,7 +1639,25 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 2
+  m_CollisionDetection: 1
+--- !u!114 &1191490445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191490437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00e0834eaeb4de843adb283a8c0cca33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycast
+  playerReach: 0
+  hitName: 
+  hitObjectName: 
+  inventaire: {fileID: 0}
+  isOnConcrete: 0
+  isOnHerbe: 0
 --- !u!1 &1473803944
 GameObject:
   m_ObjectHideFlags: 0
@@ -1946,8 +1968,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.9999999, y: 4.378173, z: 0.9999998}
-  m_Center: {x: 0, y: 1.6890861, z: 0}
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1746268676
 MeshRenderer:
   m_ObjectHideFlags: 0

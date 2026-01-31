@@ -11,10 +11,8 @@ public class PlayerRaycast : MonoBehaviour
     public string hitObjectName;
     public Inventaire inventaire;
 
-    [SerializeField]
     public bool isOnConcrete;
 
-    [SerializeField]
     public bool isOnHerbe;
 
     static public string monTexte = "au revoir";
@@ -24,12 +22,17 @@ public class PlayerRaycast : MonoBehaviour
 
     }
 
-    
+
     void Update()
     {
         Raycast();
         InterractionDialogue();
     }
+
+    //void FixedUpdate()
+    //{
+    //    Raycast();
+    //}
 
 
     public void Raycast()
@@ -94,7 +97,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("interraction lancée");
+                        Debug.Log("interraction lancï¿½e");
                         Dialogues.isInDialogue = true;
                         //monTexte = Dialogues.ligneDialogue;
                         //Dialogues.textField.GetComponent<Text>().text = monTexte;
@@ -104,6 +107,11 @@ public class PlayerRaycast : MonoBehaviour
                     }
                     break;
                 }
+            }
+
+            else
+            {
+                //Debug.Log("Rien");
             }
         }
     }
