@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Objet
+  - Sword
   layers:
   - Default
   - TransparentFX

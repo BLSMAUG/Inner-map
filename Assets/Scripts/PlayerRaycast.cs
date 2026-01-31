@@ -4,7 +4,7 @@ public class PlayerRaycast : MonoBehaviour
 {
     public float playerReach;
     public string hitName;
-    private Inventaire inventaire;
+    public Inventaire inventaire;
     void Start()
     {
 
@@ -31,8 +31,15 @@ public class PlayerRaycast : MonoBehaviour
                 if (hitInfo.transform.tag == "Objet")
                 {
                     Debug.Log("Hit the object");
-                    hitName = hitInfo.collider.gameObject.name;
-                    inventaire.AddToInventory(hitName);
+                    //hitName = hitInfo.collider.gameObject.name;
+                    ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
+                    hitName = hitObject.itemName;
+                    if (hitObject.isReachable == true)
+                    {
+                        Debug.Log(hitName);
+                        inventaire.AddToInventory(hitName);
+                    }
+                    
                 }
             }
         }

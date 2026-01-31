@@ -271,8 +271,10 @@ MonoBehaviour:
   - {fileID: 1975899337}
   - {fileID: 883617653}
   - {fileID: 112226385}
+  - {fileID: 112226385}
   inventaire: []
-  objects: []
+  objects:
+  - {fileID: 3994172179744083261, guid: 253f7631b25fe3248bda59e6c863f575, type: 3}
   ItemPrefab: {fileID: 4946150161301488477, guid: d21b755c5bafc75409dfc7d4b2697b42, type: 3}
   Canva: {fileID: 244705536}
   "itemVis\xE9": {fileID: 504440696}
@@ -1403,6 +1405,10 @@ PrefabInstance:
     - target: {fileID: 3994172179744083261, guid: 253f7631b25fe3248bda59e6c863f575, type: 3}
       propertyPath: m_Name
       value: ItemTest
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994172179744083261, guid: 253f7631b25fe3248bda59e6c863f575, type: 3}
+      propertyPath: m_TagString
+      value: Objet
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

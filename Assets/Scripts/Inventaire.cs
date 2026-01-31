@@ -37,25 +37,31 @@ public class Inventaire : MonoBehaviour
     {
         slotCount = slots.Count;
         //TEST DE LA FONCTION
-        //AddToInventory(itemVisé);
+        //AddToInventory("Sword");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //AddToInventory(GameObject PlayerRaycast.hitObject);
+        //AddToInventory(PlayerRaycast.hitName);
     }
 
-    public void AddToInventory(string itemName)
+    public void AddToInventory(string name)
     {
-        for(int i = 0; i < objects.Count; i++)
+        Debug.Log("Started function");
+        for (int i = 0; i < objects.Count; i++)
         {
-            if (objects[i].name == itemName)
+            ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
+            Debug.Log("First");
+            if (objectClassItem.itemName == name)
             {
-                ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
+                Debug.Log("Ivent "+ inventaire.Count);
+                Debug.Log("slot " + slotCount);
+
                 if (inventaire.Count < slotCount)
                 {
-                    Destroy(GameObject.Find(itemName));
+                    //Destroy(GameObject.Find(itemName));
+                    Debug.Log(objectClassItem.itemName+"YES");
                     inventaire.Add(objectClassItem);
                     //Créer objet sprite à partir du sprite stocké dan sl'objet
                     GameObject icone = Instantiate(ItemPrefab, Canva);
@@ -70,6 +76,20 @@ public class Inventaire : MonoBehaviour
             }
             break;
         }
-        
+
+        //ClassItem objectClassItem = item.GetComponent<ClassItem>();
+        //if (inventaire.Count < slotCount)
+        //{ 
+        //    inventaire.Add(objectClassItem);
+        //    //Créer objet sprite à partir du sprite stocké dan sl'objet
+        //    GameObject icone = Instantiate(ItemPrefab, Canva);
+        //    icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
+        //    icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
+        //    nextFreeSlot = nextFreeSlot + 1;
+        //}
+        //else
+        //{
+        //    Debug.Log(slotCount);
+        //}
     }
 }
