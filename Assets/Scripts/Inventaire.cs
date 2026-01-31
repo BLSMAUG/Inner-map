@@ -25,6 +25,9 @@ public class Inventaire : MonoBehaviour
     private GameObject ItemPrefab;
 
     [SerializeField]
+    private GameObject Crosshair;
+
+    [SerializeField]
     private Transform Canva;
 
     //POUR TESTER: a mettre en commentaire plus tard
@@ -43,9 +46,21 @@ public class Inventaire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CrosshairStatus();
         //AddToInventory(PlayerRaycast.hitName);
     }
 
+    public void CrosshairStatus()
+    {
+        if (FirstPersonCamera.isInGame == true)
+        {
+            Crosshair.SetActive(true);
+        }
+        else
+        {
+            Crosshair.SetActive(false);
+        }
+    }
     public void AddToInventory(string name)
     {
         Debug.Log("Started function");
