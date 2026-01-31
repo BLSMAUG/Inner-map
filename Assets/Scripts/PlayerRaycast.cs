@@ -6,6 +6,13 @@ public class PlayerRaycast : MonoBehaviour
     public string hitName;
     public string hitObjectName;
     public Inventaire inventaire;
+
+    [SerializeField]
+    public bool isOnConcrete;
+
+    [SerializeField]
+    public bool isOnHerbe;
+
     void Start()
     {
 
