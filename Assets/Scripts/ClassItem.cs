@@ -12,7 +12,7 @@ public class ClassItem : MonoBehaviour
     [SerializeField]
     public bool isReachable=true;
     [SerializeField]
-    public bool isInInventory = true;
+    public bool isInInventory = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

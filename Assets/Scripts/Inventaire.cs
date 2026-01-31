@@ -48,25 +48,26 @@ public class Inventaire : MonoBehaviour
 
     public void AddToInventory(string name)
     {
-        Debug.Log("Started function");
+        //Debug.Log("Started function");
         for (int i = 0; i < objects.Count; i++)
         {
             ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
-            Debug.Log("First");
+            //Debug.Log("First");
             if (objectClassItem.itemName == name)
             {
-                Debug.Log("Ivent "+ inventaire.Count);
-                Debug.Log("slot " + slotCount);
+                //Debug.Log("Ivent "+ inventaire.Count);
+                //Debug.Log("slot " + slotCount);
 
                 if (inventaire.Count < slotCount)
                 {
                     //Destroy(GameObject.Find(itemName));
-                    Debug.Log(objectClassItem.itemName+"YES");
+                    //Debug.Log(objectClassItem.itemName+"YES");
                     inventaire.Add(objectClassItem);
                     //Créer objet sprite à partir du sprite stocké dan sl'objet
                     GameObject icone = Instantiate(ItemPrefab, Canva);
                     icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
                     icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
+                    objectClassItem.isInInventory = true;
                     nextFreeSlot = nextFreeSlot + 1;
                 }
                 else

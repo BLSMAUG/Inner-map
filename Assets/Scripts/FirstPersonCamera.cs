@@ -1,9 +1,13 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class FirstPersonCamera : MonoBehaviour
 {
     public Transform player;
+    public float baseMouseSensitivity = 2f;
+    [SerializeField]
     public float mouseSensitivity = 2f;
     float cameraVerticalRotation = 0f;
 
@@ -12,8 +16,7 @@ public class FirstPersonCamera : MonoBehaviour
 
     void Start()
     {
-        Cursor.lockState = CursorLockMode.Locked;   
-
+        Cursor.lockState = CursorLockMode.Locked;  
     }
 
 
@@ -43,6 +46,11 @@ public class FirstPersonCamera : MonoBehaviour
         {
             Cursor.lockState= CursorLockMode.Confined;
         }
+    }
+
+    public void HandleSliderValueChanged(float value)
+    {
+        mouseSensitivity= baseMouseSensitivity*value;
     }
 
     public void TestCameraMode()

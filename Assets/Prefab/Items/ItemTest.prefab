@@ -127,3 +127,5 @@ MonoBehaviour:
   itemName: Sword
   itemDescription: A BIG ASS SWORD
   itemIcon: {fileID: 21300000, guid: 042e94927b5e8794db051bc6c0473695, type: 3}
+  isReachable: 1
+  isInInventory: 0
