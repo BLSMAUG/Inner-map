@@ -8,13 +8,15 @@ public class Dialogues : MonoBehaviour
     public string ligneDialogue;
     public int nextLine = 0;
     public int currentDialogue;
+    public int indexDialogue;
 
-    //public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, };
-    public string[] StartingDialogue = new string[] { "Ligne 1", "Ligne 2", "Ligne 3" };
+    public List<string[]> DialogueList = new List<string[]> () { StartingDialogue, ForainDialogue };
+    static public string[] StartingDialogue = new string[] { "Ligne 1", "Ligne 2", "Ligne 3" };
+    static public string[] ForainDialogue = new string[] { "Texte 1", "Texte 2", "Texte 3" };
 
     void Start()
     {
-
+        indexDialogue = 1;
     }
 
     void Update()
@@ -34,7 +36,7 @@ public class Dialogues : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 
-                /*if (nextLine < DialogueList[currentDialogue].Length - 1)
+                if (nextLine < DialogueList[currentDialogue].Length - 1)
                 {
                     nextLine += 1;
                 }
@@ -44,7 +46,7 @@ public class Dialogues : MonoBehaviour
                     nextLine = 0;
                     Debug.Log("Exited dialogue");
                     FirstPersonCamera.isInGame = true;
-                }*/
+                }
 
             }
         }
@@ -55,7 +57,11 @@ public class Dialogues : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             Debug.Log(nextLine);
-            //Debug.Log(DialogueList[currentDialogue][nextLine]);
+            Debug.Log(DialogueList[currentDialogue][nextLine]);
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            currentDialogue = indexDialogue;
         }
     }
     public void LancerDialogue()
