@@ -1,4 +1,8 @@
+using System;
+using UnityEditor.PackageManager;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PlayerRaycast : MonoBehaviour
 {
@@ -13,6 +17,8 @@ public class PlayerRaycast : MonoBehaviour
     [SerializeField]
     public bool isOnHerbe;
 
+    static public string monTexte = "au revoir";
+
     void Start()
     {
 
@@ -22,6 +28,7 @@ public class PlayerRaycast : MonoBehaviour
     void Update()
     {
         Raycast();
+        InterractionDialogue();
     }
 
 
@@ -53,18 +60,50 @@ public class PlayerRaycast : MonoBehaviour
             }
         }
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
-        {
-            if (hitInfo.collider.CompareTag("Concrete"))
-            {
-                Debug.Log("Concrete");
-                isOnConcrete = true;
-            }
+        //if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        //{
+        //    if (hitInfo.collider.CompareTag("Concrete"))
+        //    {
+        //        Debug.Log("Concrete");
+        //        isOnConcrete = true;
+        //    }
 
-            else if (hitInfo.collider.CompareTag("Herbe"))
+        //    else if (hitInfo.collider.CompareTag("Herbe"))
+        //    {
+        //        Debug.Log("Herbe");
+        //        isOnHerbe = true;
+        //    }
+        //}
+
+    }
+
+    public void InterractionDialogue()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
+
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
+        {
+            if (hitInfo.transform.tag == "Objet")
             {
-                Debug.Log("Herbe");
-                isOnHerbe = true;
+                hitObjectName = hitInfo.collider.gameObject.name;
+                ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
+                hitName = hitObject.itemName;
+                while (hitObject.isReachable == true)
+                {
+                    if (Input.GetKeyDown(KeyCode.E))
+                    {
+                        Debug.Log("interraction lancée");
+                        Dialogues.isInDialogue = true;
+                        //monTexte = Dialogues.ligneDialogue;
+                        //Dialogues.textField.GetComponent<Text>().text = monTexte;
+                        //monTexte = "au revoir";
+                        //Dialogues.textField.GetComponent<Text>().text = "monTexte";
+
+                    }
+                    break;
+                }
             }
         }
     }
