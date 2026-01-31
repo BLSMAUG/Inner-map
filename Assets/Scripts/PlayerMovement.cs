@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -14,10 +15,16 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isTryingToMove;
 
+    private bool isOnConcrete;
+
+    private bool isOnHerbe;
+
     void Start()
     {
         Cac = GetComponent<CharacterController>();
-        
+
+        //rb = GetComponent<Rigidbody>();
+
     }
 
 
@@ -25,6 +32,9 @@ public class PlayerMovement : MonoBehaviour
     {
         Move();
         HandleFootsteps();
+        //TestSol();
+        //OnCollisionEnter();
+
     }
 
     void Move()
@@ -54,22 +64,58 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        if (isTryingToMove && Cac.isGrounded)
+        if (isTryingToMove)
         {
-            if (!isFootstepPlaying)
-            {
-                AudioManager.instance.PlayLoopSFX(footstepLoopClip);
-                isFootstepPlaying = true;
-            }
+            AudioManager.instance.PlayLoopSFX(footstepLoopClip);
+            isFootstepPlaying = true;
+            ///Debug.Log("Play");
         }
         else
         {
-            if (isFootstepPlaying)
+            if (!isTryingToMove)
             {
                 AudioManager.instance.StopLoopSFX();
                 isFootstepPlaying = false;
+                ///Debug.Log("stop");
             }
         }
     }
+    
+
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    if (collision.gameObject.tag == "Herbe")
+    //    {
+    //        Debug.Log("Herbe");
+    //        isOnHerbe = true;
+    //        Debug.Log(gameObject.tag)
+    //    }
+
+    //}
+
+    //void OnCollisionExit(Collision collision)
+    //{
+
+    //    if (collision.gameObject.tag != "Herbe")
+    //    {
+    //        Debug.Log("Pas herbe");
+    //        isOnHerbe = false;
+    //    }
+        /*else if (collision.gameObject.tag != "Gravel")
+        {
+            Debug.Log("Pas gravel");
+            isOnGravel = false;
+        }*/
+    //}
+
+    //public void TestSol()
+    //{
+    //    if (isOnConcrete == true)
+    //    {
+    //        Debug.Log("start ok");
+    //    }
+    //}
+
+
 
 }
