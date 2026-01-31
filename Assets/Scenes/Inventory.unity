@@ -376,6 +376,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycast
   playerReach: 10
   hitName: 
+  hitObjectName: 
+  inventaire: {fileID: 244705534}
 --- !u!136 &287831944
 CapsuleCollider:
   m_ObjectHideFlags: 0
