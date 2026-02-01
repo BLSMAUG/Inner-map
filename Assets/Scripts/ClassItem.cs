@@ -15,8 +15,8 @@ public class ClassItem : MonoBehaviour
     public bool isCollectible = true;
     [SerializeField]
     public bool isInInventory = false;
-    [SerializeField]
-    public int itemIndex;
+    //[SerializeField]
+    //public int itemIndex;
 
     static public int hitIndex;
 
@@ -32,18 +32,18 @@ public class ClassItem : MonoBehaviour
         
     }
 
-    public void SwapIndex()
-    {
-        if (Dialogues.isInDialogue == true)
-        {
-            hitIndex = itemIndex;
-            //Debug.Log(hitIndex);
-        }
-    }
+    //public void SwapIndex()
+    //{
+    //    if (Dialogues.isInDialogue == true)
+    //    {
+    //        hitIndex = itemIndex;
+    //        //Debug.Log(hitIndex);
+    //    }
+    //}
 
-    private void TakeItem()
-    {
-        // A FAIRE MDR BONNE CHANCE A LA PERSONNE INCROYABLE QUI LE FERA 
-        //UPDATE: JE CROIS QUE CEST BON MAIS  VOIR AVEC LA 3D COMMENT ON SELECTIONNE CETTE MERDE
-    }
+    //private void TakeItem()
+    //{
+    //    // A FAIRE MDR BONNE CHANCE A LA PERSONNE INCROYABLE QUI LE FERA 
+    //    //UPDATE: JE CROIS QUE CEST BON MAIS  VOIR AVEC LA 3D COMMENT ON SELECTIONNE CETTE MERDE
+    //}
 }

@@ -42,7 +42,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         //UpdateGround();
         Raycast();
-        //InterractionDialogue();
+        InterractionDialogue();
         InterractKey();
         PickUpKey();
     }
@@ -52,6 +52,26 @@ public class PlayerRaycast : MonoBehaviour
     //    Raycast();
     //}
 
+    public void PorteInteraction()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
+        {
+            if (hitInfo.transform.tag == "Objet")
+            {
+                hitObjectName = hitInfo.collider.gameObject.name;
+                ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
+                hitName = hitObject.itemName;
+                if (hitObject.isReachable == true && hitName=="Porte")
+                {
+                    Debug.Log(hitName);
+                    GameManager.OverturePorte(GameManager.cle,GameManager.porteSalle1);
+                }
+            }
+        }
+        
+    }
 
     public void Raycast()
     {
@@ -79,6 +99,8 @@ public class PlayerRaycast : MonoBehaviour
                 }
             }
         }
+
+
 
         isOnConcrete = false;
         isOnHerbe = false;

@@ -7,18 +7,15 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
-    public GameObject porteSalle1;
-    public GameObject porte1Salle2;
-    public GameObject porte2Salle2;
-    public bool porte1isOpened=false;
-    public bool porte2isOpened=false;
-    public Transform tInventory;
-    [SerializeField]
-    public Inventaire canva;
-    public ClassItem cle;
-    [SerializeField]
-    public AudioSource DoorAndKey;
-    [SerializeField]
+    static public GameObject porteSalle1;
+    static public GameObject porte1Salle2;
+    static public GameObject porte2Salle2;
+    static public bool porte1isOpened=false;
+    static public bool porte2isOpened=false;
+    static public Transform tInventory;
+    static public Inventaire canva;
+    static public ClassItem cle;
+    static public AudioSource DoorAndKey;
     public ClassItem epuisette;
 
     public GameState currentState;
@@ -49,6 +46,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetState(GameState.Playing);
+        porteSalle1=GameObject.Find("Porte");
+        cle = GameObject.Find("props_cle").GetComponent<ClassItem>();
     }
 
     public void SetState(GameState newState)
@@ -72,19 +71,22 @@ public class GameManager : MonoBehaviour
 
     }
 
-    public void OverturePorte(ClassItem cle, GameObject porte)
+    static public void OverturePorte(ClassItem cle, GameObject porte)
     {
-        if (porte1isOpened == false)
-        {
-            if (cle.isInInventory == true)
+        if (Input.GetKeyDown(KeyCode.E))
+        { 
+            if (GameManager.porte1isOpened == false)
             {
-                //Debug.Log("Yalaklé");
-                porte.transform.Rotate(0, 90, 0);
-                porte1isOpened = true;
-                DoorAndKey.Play();
-                canva.inventaire.Remove(cle);
-                cle.isInInventory = false;
-                Destroy(tInventory.GetChild(9).gameObject);
+                if (cle.isInInventory == true)
+                {
+                    //Debug.Log("Yalaklé");
+                    porte.transform.Rotate(0, 90, 0);
+                    porte1isOpened = true;
+                    DoorAndKey.Play();
+                    canva.inventaire.Remove(cle);
+                    cle.isInInventory = false;
+                    Destroy(tInventory.GetChild(9).gameObject);
+                }
             }
         }
     }
