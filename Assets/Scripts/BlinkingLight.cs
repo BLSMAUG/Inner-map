@@ -1,18 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Audio;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class BlinkingLight : MonoBehaviour
 {
-    public int BlinkChance;
 
+    public float minIntensity;
+    public float maxIntensity;
    
+
+    public Light myLight;
+
+
     void Start()
     {
-        
+        myLight = GetComponent<Light>();
+        StartCoroutine(BlinkingLight1());
     }
 
    
     void Update()
     {
-        
+       
+    }
+    IEnumerator BlinkingLight1()
+    {
+        Debug.Log("1");
+        int time = Random.Range(1, 5);
+        yield return new WaitForSeconds(time);
+        myLight.intensity = minIntensity;
+
+
+        StartCoroutine(BlinkingLight2());
+    }
+    IEnumerator BlinkingLight2()
+    {
+        Debug.Log("2");
+        yield return new WaitForSeconds(0.1f);
+        myLight.intensity = maxIntensity;
+
+
+        StartCoroutine(BlinkingLight1());
     }
 }

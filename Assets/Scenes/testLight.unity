@@ -1465,6 +1465,54 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 14ff98760c2888b4a920c4a869c6cc02, type: 3}
+--- !u!1 &338551501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338551503}
+  - component: {fileID: 338551502}
+  m_Layer: 0
+  m_Name: Blinklight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &338551502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338551501}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334eb4724ebecc648b313ed927c542b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkingLight
+  minIntensity: 0
+  maxIntensity: 25000
+  myLight: {fileID: 1029072450}
+--- !u!4 &338551503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338551501}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0.6, y: 55.9, z: 148.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1029072451}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &347052638
 GameObject:
   m_ObjectHideFlags: 0
@@ -5579,6 +5627,7 @@ GameObject:
   - component: {fileID: 1029072451}
   - component: {fileID: 1029072450}
   - component: {fileID: 1029072449}
+  - component: {fileID: 1029072452}
   m_Layer: 0
   m_Name: Spot Light (7)
   m_TagString: Untagged
@@ -5665,7 +5714,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
@@ -5688,13 +5737,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1029072448}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0.6, y: 55.9, z: 148.2}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 338551503}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1029072452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029072448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 334eb4724ebecc648b313ed927c542b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlinkingLight
+  minIntensity: 500
+  maxIntensity: 25000
+  myLight: {fileID: 1029072450}
 --- !u!1 &1038716250
 GameObject:
   m_ObjectHideFlags: 0
@@ -8363,6 +8427,7 @@ MonoBehaviour:
   isOnConcrete: 0
   isOnHerbe: 0
   isOnStone: 0
+  isOnWood: 0
 --- !u!114 &1474206988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8379,6 +8444,7 @@ MonoBehaviour:
   footstepConcreteLoopClip: {fileID: 0}
   footstepHerbeLoopClip: {fileID: 0}
   footstepStoneLoopClip: {fileID: 0}
+  footstepWoodLoopClip: {fileID: 0}
   playerRaycast: {fileID: 0}
 --- !u!136 &1474206989
 CapsuleCollider:
@@ -13007,7 +13073,7 @@ SceneRoots:
   - {fileID: 576579935}
   - {fileID: 1998118389}
   - {fileID: 1760773908}
-  - {fileID: 1029072451}
+  - {fileID: 338551503}
   - {fileID: 2139601580}
   - {fileID: 1137172140}
   - {fileID: 1602643349}
