@@ -6,6 +6,13 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    public GameObject porteSalle1;
+    public GameObject porte1Salle2;
+    public GameObject porte2Salle2;
+    public bool porte1isOpened=false;
+    public bool porte2isOpened=false;
+    [SerializeField]
+    public Inventaire canva;
 
     public GameState currentState;
 
@@ -56,6 +63,20 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
+    }
+
+    public void OverturePorte1(GameObject cle, GameObject porte)
+    {
+        if (porte1isOpened == false)
+        {
+            ClassItem objectClassItem = cle.GetComponent<ClassItem>();
+            if (objectClassItem.isInInventory == true)
+            {
+                //Debug.Log("Ya la clé");
+                porte.transform.Rotate(0, 90, 0);
+                porte1isOpened = true;
+            }
+        }
     }
 
     public bool CanPlayerMove()
