@@ -10,19 +10,18 @@ public class Dialogues : MonoBehaviour
     static public int nextLine = 0;
     static public int currentDialogue = 0;
     static public int indexDialogue;
-    [SerializeField]
-    public GameObject dialogueBox;
-    [SerializeField]
-    public GameObject enterKey;
-    [SerializeField]
-    public GameObject textField;
 
-    [SerializeField]
-    public AudioSource click_dialogue;
+    static public GameObject dialogueBox;
 
+    static public GameObject enterKey;
+
+    static public GameObject textField;
+
+    static public AudioSource click_dialogue;
 
 
-    public List<string[]> DialogueList = new List<string[]>() { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, PickUpKeyDialogue, FishermanDialogue, NoteTheWorkerDialogue, GeneratorWithoutFuseDialogue, PickUpFuseDialogue, PickUpCatchingNet, FirstKeyDialogue, SecondKeyDialogue, MaskDialogue, PickUpMaskDialogue, CatchingNetDialogue, FuseDialogue, DoorOpeningDialogue};
+
+    static public List<string[]> DialogueList = new List<string[]>() { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, PickUpKeyDialogue, FishermanDialogue, NoteTheWorkerDialogue, GeneratorWithoutFuseDialogue, PickUpFuseDialogue, PickUpCatchingNet, FirstKeyDialogue, SecondKeyDialogue, MaskDialogue, PickUpMaskDialogue, CatchingNetDialogue, FuseDialogue, DoorOpeningDialogue};
     static public string[] StartingDialogue = new string[] { "... ... ...", "Why am i here ?", "My memories are messing with me, i can't remember." }; //index 0
     static public string[] ForainDialogue = new string[] { "Hey you ! I'm up here !", "You have to help me !", "You need to fix the generator, behind the ferris wheel !" }; //1
     static public string[] StartingLetterDialogue = new string[] { "The journey is painful, the end is full of sorrow.", "Don't leave, stay with me till the end." }; //2
@@ -50,31 +49,36 @@ public class Dialogues : MonoBehaviour
         //indexDialogue = 1;
         //ligneDialogue = DialogueList[currentDialogue][nextLine];
         //Debug.Log(ligneDialogue);
+
+        dialogueBox = GameObject.Find("Dialogue Box");
+        enterKey = GameObject.Find("Enter Key");
+
+        StartDialogue();
     }
 
     void Update()
     {
         //LancerDialogue();
         //TestDialogue();
-        Dialogue();
+        //Dialogue();
     }
 
-    public void Dialogue()
+    static public void Dialogue(int currentDialogue)
     {
         if (isInDialogue == true)
         {
-            currentDialogue = ClassItem.hitIndex;
+            //currentDialogue = ClassItem.hitIndex;
             FirstPersonCamera.isInGame = false;
+            
             dialogueBox.SetActive(true);
+            
             enterKey.SetActive(true);
             ligneDialogue = DialogueList[currentDialogue][nextLine];
             //Debug.Log(ligneDialogue);
-
             textField.GetComponent<Text>().text = ligneDialogue;
-
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                click_dialogue.Play();
+                //click_dialogue.Play();
                 if (nextLine < DialogueList[currentDialogue].Length - 1)
                 {
                     nextLine += 1;
@@ -89,13 +93,45 @@ public class Dialogues : MonoBehaviour
 
             }
         }
-        else
+        if (isInDialogue == false)
         {
             dialogueBox.SetActive(false);
             enterKey.SetActive(false);
         }
     }
-    
+
+
+    public void StartDialogue()
+    {
+        if (MainMenu.gameStart == true)
+        {
+            FirstPersonCamera.isInGame = false;
+            dialogueBox.SetActive(true);
+            enterKey.SetActive(true);
+            ligneDialogue = DialogueList[0][nextLine];
+            //Debug.Log(ligneDialogue);
+            textField.GetComponent<Text>().text = ligneDialogue;
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                if (nextLine < DialogueList[0].Length - 1)
+                {
+                    nextLine += 1;
+                }
+                else
+                {
+                    nextLine = 0;
+                    FirstPersonCamera.isInGame = true;
+                }
+            }
+        }
+        //if (isInDialogue == false)
+        //{
+        dialogueBox.SetActive(false);
+        enterKey.SetActive(false);
+        //}
+    }
+
+
     //public void TestDialogue()
     //{
     //    if (Input.GetKeyDown(KeyCode.K))

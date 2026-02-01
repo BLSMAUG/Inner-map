@@ -24,6 +24,8 @@ public class MainMenu : MonoBehaviour
     [SerializeField]
     public Slider volumeSlider;
 
+    static public bool gameStart = false;
+
     void Start()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
@@ -70,6 +72,7 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1);
         FirstPersonCamera.isInGame = true;
+        gameStart = true;
         //Modifier pour qu'on revienne à l'état de base ?
     }
 
