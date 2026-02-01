@@ -160,7 +160,7 @@ public class PlayerRaycast : MonoBehaviour
                     {
                         Dialogues.currentDialogue = ClassItem.hitIndex;
                         //Debug.Log(Dialogues.currentDialogue);
-                        Dialogues.isInDialogue = true;
+                        //Dialogues.isInDialogue = true;
 
                     }
                     break;
