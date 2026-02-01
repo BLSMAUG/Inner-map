@@ -22,7 +22,7 @@ public class Dialogues : MonoBehaviour
 
 
 
-    public List<string[]> DialogueList = new List<string[]>() { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, PickUpKeyDialogue, FishermanDialogue, NoteTheWorkerDialogue, GeneratorWithoutFuseDialogue, PickUpFuseDialogue, PickUpCatchingNet, FirstKeyDialogue, SecondKeyDialogue, MaskDialogue, PickUpMaskDialogue, CatchingNetDialogue, FuseDialogue};
+    public List<string[]> DialogueList = new List<string[]>() { StartingDialogue, ForainDialogue, StartingLetterDialogue, DoorLockedWithKeyDialogue, DoorLockedDialogue, DoorWhenUnlockedWithKeyDialogue, PickUpKeyDialogue, FishermanDialogue, NoteTheWorkerDialogue, GeneratorWithoutFuseDialogue, PickUpFuseDialogue, PickUpCatchingNet, FirstKeyDialogue, SecondKeyDialogue, MaskDialogue, PickUpMaskDialogue, CatchingNetDialogue, FuseDialogue, DoorOpeningDialogue};
     static public string[] StartingDialogue = new string[] { "... ... ...", "Why am i here ?", "My memories are messing with me, i can't remember." }; //index 0
     static public string[] ForainDialogue = new string[] { "Hey you ! I'm up here !", "You have to help me !", "You need to fix the generator, behind the ferris wheel !" }; //1
     static public string[] StartingLetterDialogue = new string[] { "The journey is painful, the end is full of sorrow.", "Don't leave, stay with me till the end." }; //2
@@ -41,6 +41,7 @@ public class Dialogues : MonoBehaviour
     static public string[] PickUpMaskDialogue = new string[] { "You have picked up the mask, it is now in your inventory." }; //15
     static public string[] CatchingNetDialogue = new string[] { "This catching net could let you reach a faraway object." }; //16
     static public string[] FuseDialogue = new string[] { "This should be the fuse for the generator.", "It seems to be too far, you're gonna need something to reach it." }; //17
+    static public string[] DoorOpeningDialogue = new string[] { "You opened the door." }; //18
 
 
 
