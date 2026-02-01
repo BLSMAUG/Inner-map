@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,10 +15,8 @@ public class PlayerRaycast : MonoBehaviour
     static public bool eKeyState = false;
 
     public bool isOnConcrete;
-
     public bool isOnHerbe;
-
-    static public string monTexte = "au revoir";
+    public bool isOnStone;
 
     void Start()
     {
@@ -65,20 +64,30 @@ public class PlayerRaycast : MonoBehaviour
             }
         }
 
-        //if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
-        //{
-        //    if (hitInfo.collider.CompareTag("Concrete"))
-        //    {
-        //        Debug.Log("Concrete");
-        //        isOnConcrete = true;
-        //    }
+        isOnConcrete = false;
+        isOnHerbe = false;
+        isOnStone = false;
 
-        //    else if (hitInfo.collider.CompareTag("Herbe"))
-        //    {
-        //        Debug.Log("Herbe");
-        //        isOnHerbe = true;
-        //    }
-        //}
+        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        {
+            if (hitInfo.collider.CompareTag("Concrete"))
+            {
+                //Debug.Log("Concrete");
+                isOnConcrete = true;
+            }
+
+            else if (hitInfo.collider.CompareTag("Herbe"))
+            {
+                //Debug.Log("Herbe");
+                isOnHerbe = true;
+            }
+
+            else if (hitInfo.collider.CompareTag("Stone"))
+            {
+                //Debug.Log("Stone");
+                isOnStone = true;
+            }
+        }
 
     }
 

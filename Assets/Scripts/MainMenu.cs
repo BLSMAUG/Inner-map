@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -14,10 +16,17 @@ public class MainMenu : MonoBehaviour
     [SerializeField] 
     private Sprite sprite2;
     [SerializeField]
-    private Image backgroundImage;
+    private Image backgroundImage; 
+    [SerializeField]
+    public AudioSource glitchSound;
+    [SerializeField]
+    public AudioSource clickSound;
+    [SerializeField]
+    public Slider volumeSlider;
 
     void Start()
     {
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
         backgroundImage = background.GetComponent<Image>();
         StartCoroutine(MenuGlitch2());
         FirstPersonCamera.isInGame = false;
@@ -26,6 +35,11 @@ public class MainMenu : MonoBehaviour
     {
         
      
+    }
+
+    public void ClickSound()
+    {
+        clickSound.Play();
     }
 
     IEnumerator MenuGlitch1()
@@ -45,6 +59,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("2");
         int time = Random.Range(1, 5);
         yield return new WaitForSeconds(time);
+        glitchSound.Play();
         backgroundImage.sprite = sprite2;
         
         StartCoroutine(MenuGlitch1());
@@ -66,6 +81,7 @@ public class MainMenu : MonoBehaviour
 
     public void SetVolume(float sliderValue)
     {
-        //AudioManager.musicVolume.SetFloat("MusicVol", Mathf.Log10(sliderValue) * 20);
+        PlayerPrefs.SetFloat("volume", sliderValue);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }

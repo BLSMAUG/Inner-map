@@ -3,15 +3,22 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private bool isPaused = false; // Permet de savoir si le jeu est en pause ou non.
+    [SerializeField] 
+    private bool isPaused = false; // Permet de savoir si le jeu est en pause ou non.
     public GameObject pauseMenuObject;
+    public GameObject optionsMenuObject;
+    [SerializeField]
+    public AudioSource clickSound;
+    [SerializeField]
+    public Slider volumeSlider;
 
     void Start()
     {
-
+        volumeSlider.value = PlayerPrefs.GetFloat("volume");
     }
 
 
@@ -21,14 +28,7 @@ public class PauseMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             isPaused = !isPaused;
-        }
-
-        if (isPaused)
-        {
-
-            //Time.timeScale = 0f; // Le temps s'arrete
             PauseGame();
-            FirstPersonCamera.isInGame = false;
         }
 
         //else
@@ -40,15 +40,29 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        pauseMenuObject.SetActive(true);
+        if (isPaused)
+        {
+
+            //Time.timeScale = 0f; // Le temps s'arrete
+            pauseMenuObject.SetActive(true);
+            optionsMenuObject.SetActive(false);
+            FirstPersonCamera.isInGame = false;
+        }
+       
     }
 
     public void ResumeGame()
     {
         pauseMenuObject.SetActive(false);
+        optionsMenuObject.SetActive(false);
         //Time.timeScale = 1.0f;
         isPaused = !isPaused;
         FirstPersonCamera.isInGame = true;
+    }
+
+    public void ClickSound()
+    {
+        clickSound.Play();
     }
 
     public void MainMenu()
@@ -61,5 +75,11 @@ public class PauseMenu : MonoBehaviour
     public void QuitMenu()
     {
         Application.Quit();
+    }
+
+    public void SetVolume(float sliderValue)
+    {
+        PlayerPrefs.SetFloat("volume", sliderValue);
+        AudioListener.volume = PlayerPrefs.GetFloat("volume");
     }
 }
