@@ -12,6 +12,8 @@ public class ClassItem : MonoBehaviour
     [SerializeField]
     public bool isReachable=true;
     [SerializeField]
+    public bool isCollectible = true;
+    [SerializeField]
     public bool isInInventory = false;
     [SerializeField]
     public int itemIndex;

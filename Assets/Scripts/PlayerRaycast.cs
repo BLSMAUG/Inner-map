@@ -55,7 +55,7 @@ public class PlayerRaycast : MonoBehaviour
                     hitObjectName = hitInfo.collider.gameObject.name;
                     ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
                     hitName = hitObject.itemName;
-                    if (hitObject.isReachable == true)
+                    if (hitObject.isReachable == true && hitObject.isCollectible==true)
                     {
                         Debug.Log(hitName);
                         Destroy(GameObject.Find(hitObjectName));
