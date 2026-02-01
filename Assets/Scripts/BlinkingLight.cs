@@ -12,6 +12,8 @@ public class BlinkingLight : MonoBehaviour
 
     public float minIntensity;
     public float maxIntensity;
+    [SerializeField]
+    public int maxTime;
    
 
     public Light myLight;
@@ -31,7 +33,7 @@ public class BlinkingLight : MonoBehaviour
     IEnumerator BlinkingLight1()
     {
         Debug.Log("1");
-        int time = Random.Range(1, 5);
+        int time = Random.Range(1, maxTime);
         yield return new WaitForSeconds(time);
         myLight.intensity = minIntensity;
 

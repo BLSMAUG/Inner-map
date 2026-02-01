@@ -1496,6 +1496,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlinkingLight
   minIntensity: 0
   maxIntensity: 25000
+  maxTime: 0
   myLight: {fileID: 1029072450}
 --- !u!4 &338551503
 Transform:
@@ -2820,7 +2821,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
@@ -5758,6 +5759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlinkingLight
   minIntensity: 500
   maxIntensity: 25000
+  maxTime: 5
   myLight: {fileID: 1029072450}
 --- !u!1 &1038716250
 GameObject:
@@ -6404,7 +6406,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
@@ -10525,7 +10527,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
@@ -11811,7 +11813,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
@@ -12992,7 +12994,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 25.12
