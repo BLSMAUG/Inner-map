@@ -13,6 +13,7 @@ public class PlayerRaycast : MonoBehaviour
     public Inventaire inventaire;
 
     static public bool eKeyState = false;
+    static public bool fKeyState = false;
 
     //static public PlayerMovement.GroundType currentGround;
 
@@ -43,6 +44,7 @@ public class PlayerRaycast : MonoBehaviour
         Raycast();
         InterractionDialogue();
         InterractKey();
+        PickUpKey();
     }
 
     //void FixedUpdate()
@@ -56,7 +58,7 @@ public class PlayerRaycast : MonoBehaviour
         RaycastHit hitInfo;
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             Debug.Log("Doing ray test");
             if (Physics.Raycast(camRay, out hitInfo, playerReach))
@@ -161,6 +163,33 @@ public class PlayerRaycast : MonoBehaviour
         else
         {
             eKeyState = false;
+        }
+    }
+
+    public void PickUpKey()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
+        {
+            if (hitInfo.transform.tag == "Objet")
+            {
+                hitObjectName = hitInfo.collider.gameObject.name;
+                ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
+                if (hitObject.isCollectible == true)
+                {
+                    fKeyState = true;
+                }
+                else
+                {
+                    fKeyState = false;
+                }
+            }
+        }
+        else
+        {
+            fKeyState = false;
         }
     }
 
