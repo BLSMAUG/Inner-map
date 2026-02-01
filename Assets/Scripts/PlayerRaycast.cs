@@ -42,7 +42,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         //UpdateGround();
         Raycast();
-        InterractionDialogue();
+        //InterractionDialogue();
         InterractKey();
         PickUpKey();
     }
@@ -89,7 +89,7 @@ public class PlayerRaycast : MonoBehaviour
         {
             if (hitInfo.collider.CompareTag("Concrete"))
             {
-                Debug.Log("Concrete");
+                //Debug.Log("Concrete");
                 isOnConcrete = true;
                 //currentGround = PlayerMovement.GroundType.Concrete;
             }
@@ -122,7 +122,7 @@ public class PlayerRaycast : MonoBehaviour
     {
         RaycastHit hitInfo;
         Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-        
+
 
         if (Physics.Raycast(camRay, out hitInfo, playerReach))
         {
@@ -133,10 +133,13 @@ public class PlayerRaycast : MonoBehaviour
                 hitName = hitObject.itemName;
                 while (hitObject.isReachable == true)
                 {
+
                     if (Input.GetKeyDown(KeyCode.E))
                     {
-                        Debug.Log("interraction lancée");
+                        Dialogues.currentDialogue = ClassItem.hitIndex;
+                        //Debug.Log(Dialogues.currentDialogue);
                         Dialogues.isInDialogue = true;
+
                     }
                     break;
                 }

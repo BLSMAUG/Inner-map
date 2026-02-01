@@ -29,7 +29,7 @@ public class ClassItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SwapIndex();
+        
     }
 
     public void SwapIndex()

@@ -900,6 +900,10 @@ PrefabInstance:
       value: Objet
       objectReference: {fileID: 0}
     - target: {fileID: 8337269858979761607, guid: 253f7631b25fe3248bda59e6c863f575, type: 3}
+      propertyPath: itemIndex
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 8337269858979761607, guid: 253f7631b25fe3248bda59e6c863f575, type: 3}
       propertyPath: isCollectible
       value: 0
       objectReference: {fileID: 0}
@@ -1493,7 +1497,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 210, y: -150}
+  m_AnchoredPosition: {x: 200, y: -130}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1741507904
@@ -1581,7 +1585,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44cbaabafedbf247a632d16cffba325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FirstPersonCamera
-  player: {fileID: 1298485358}
+  player: {fileID: 1163704628}
   baseMouseSensitivity: 2
   mouseSensitivity: 2
 --- !u!114 &1959400577
@@ -1845,8 +1849,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 40}
-  m_SizeDelta: {x: 1280, y: 960}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072156955
 MonoBehaviour:

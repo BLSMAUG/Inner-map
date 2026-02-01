@@ -54,8 +54,8 @@ public class Dialogues : MonoBehaviour
 
     void Update()
     {
-        LancerDialogue();
-        TestDialogue();
+        //LancerDialogue();
+        //TestDialogue();
         Dialogue();
     }
 
@@ -96,31 +96,31 @@ public class Dialogues : MonoBehaviour
         }
     }
     
-    public void TestDialogue()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            textField.GetComponent<Text>().text = DialogueList[currentDialogue][nextLine];
+    //public void TestDialogue()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.K))
+    //    {
+    //        textField.GetComponent<Text>().text = DialogueList[currentDialogue][nextLine];
 
-            Debug.Log(nextLine);
-            Debug.Log(DialogueList[currentDialogue][nextLine]);
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            currentDialogue = indexDialogue;
-        }
-    }
-    public void LancerDialogue()
-    {
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            isInDialogue = true;
-        }
-    }
+    //        Debug.Log(nextLine);
+    //        Debug.Log(DialogueList[currentDialogue][nextLine]);
+    //    }
+    //    if (Input.GetKeyDown(KeyCode.J))
+    //    {
+    //        currentDialogue = indexDialogue;
+    //    }
+    //}
+    //public void LancerDialogue()
+    //{
+    //    if (Input.GetKeyDown(KeyCode.L))
+    //    {
+    //        isInDialogue = true;
+    //    }
+    //}
 
-    public void TestInterractionDialogue()
-    {
+    //public void TestInterractionDialogue()
+    //{
 
-    }
+    //}
 
 }

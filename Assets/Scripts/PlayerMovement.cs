@@ -139,7 +139,7 @@ public class PlayerMovement : MonoBehaviour
         {
             AudioManager.instance.PlayLoopSFX(footstepConcreteLoopClip);
             isFootstepPlaying = true;
-            Debug.Log("Play");
+            //Debug.Log("Play");
         }
 
         else if (isTryingToMove && playerRaycast.isOnHerbe == true)
@@ -166,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.instance.StopLoopSFX();
                 isFootstepPlaying = false;
-                Debug.Log("stop");
+                //Debug.Log("stop");
             }
         }
 
