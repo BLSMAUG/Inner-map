@@ -14,9 +14,21 @@ public class PlayerRaycast : MonoBehaviour
 
     static public bool eKeyState = false;
 
+    //static public PlayerMovement.GroundType currentGround;
+
+    //[SerializeField] 
+    //private float groundRayLength = 2f;
+
+    //[SerializeField] 
+    //private LayerMask groundLayer;
+
+
     public bool isOnConcrete;
+
     public bool isOnHerbe;
+
     public bool isOnStone;
+
     public bool isOnWood;
 
     void Start()
@@ -27,6 +39,7 @@ public class PlayerRaycast : MonoBehaviour
 
     void Update()
     {
+        //UpdateGround();
         Raycast();
         InterractionDialogue();
         InterractKey();
@@ -68,31 +81,36 @@ public class PlayerRaycast : MonoBehaviour
         isOnConcrete = false;
         isOnHerbe = false;
         isOnStone = false;
+        isOnWood = false;
 
-        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 1.5f))
+        if (Physics.Raycast(transform.position, Vector3.down, out hitInfo, 25f))
         {
             if (hitInfo.collider.CompareTag("Concrete"))
             {
-                //Debug.Log("Concrete");
+                Debug.Log("Concrete");
                 isOnConcrete = true;
+                //currentGround = PlayerMovement.GroundType.Concrete;
             }
 
             else if (hitInfo.collider.CompareTag("Herbe"))
             {
-                //Debug.Log("Herbe");
+                Debug.Log("Herbe");
                 isOnHerbe = true;
+                //currentGround = PlayerMovement.GroundType.Herbe;
             }
 
             else if (hitInfo.collider.CompareTag("Stone"))
             {
-                //Debug.Log("Stone");
+                Debug.Log("Stone");
                 isOnStone = true;
+                //currentGround = PlayerMovement.GroundType.Stone;
             }
 
             else if (hitInfo.collider.CompareTag("Wood"))
             {
-                //Debug.Log("Stone");
+                Debug.Log("Stone");
                 isOnWood = true;
+                //currentGround = PlayerMovement.GroundType.Wood;
             }
         }
 
@@ -145,5 +163,39 @@ public class PlayerRaycast : MonoBehaviour
             eKeyState = false;
         }
     }
+
+    //void UpdateGround()
+    //{
+    //    // Reset
+    //    isOnConcrete = false;
+    //    isOnHerbe = false;
+    //    isOnStone = false;
+    //    isOnWood = false;
+
+    //    RaycastHit hit;
+    //    Vector3 origin = transform.position + Vector3.up * 0.2f;
+
+    //    if (Physics.Raycast(origin, Vector3.down, out hit, groundRayLength, groundLayer))
+    //    {
+    //        switch (hit.collider.tag)
+    //        {
+    //            case "Concrete":
+    //                isOnConcrete = true;
+    //                break;
+
+    //            case "Herbe":
+    //                isOnHerbe = true;
+    //                break;
+
+    //            case "Stone":
+    //                isOnStone = true;
+    //                break;
+
+    //            case "Wood":
+    //                isOnWood = true;
+    //                break;
+    //        }
+    //    }
+    //}
 
 }
