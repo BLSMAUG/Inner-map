@@ -9,6 +9,7 @@ TagManager:
   - Concrete
   - Herbe
   - Stone
+  - Wood
   layers:
   - Default
   - TransparentFX

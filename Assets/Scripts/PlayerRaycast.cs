@@ -17,6 +17,7 @@ public class PlayerRaycast : MonoBehaviour
     public bool isOnConcrete;
     public bool isOnHerbe;
     public bool isOnStone;
+    public bool isOnWood;
 
     void Start()
     {
@@ -86,6 +87,12 @@ public class PlayerRaycast : MonoBehaviour
             {
                 //Debug.Log("Stone");
                 isOnStone = true;
+            }
+
+            else if (hitInfo.collider.CompareTag("Wood"))
+            {
+                //Debug.Log("Stone");
+                isOnWood = true;
             }
         }
 

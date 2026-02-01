@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private AudioClip footstepStoneLoopClip;
 
+    [SerializeField]
+    private AudioClip footstepWoodLoopClip;
+
     private bool isFootstepPlaying;
 
     private bool isTryingToMove;
@@ -87,6 +90,13 @@ public class PlayerMovement : MonoBehaviour
             AudioManager.instance.PlayLoopSFX(footstepStoneLoopClip);
             isFootstepPlaying = true;
         }
+
+        else if (isTryingToMove && playerRaycast.isOnWood == true)
+        {
+            AudioManager.instance.PlayLoopSFX(footstepWoodLoopClip);
+            isFootstepPlaying = true;
+        }
+
         else
         {
             if (!isTryingToMove)
