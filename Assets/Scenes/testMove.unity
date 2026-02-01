@@ -1158,7 +1158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44cbaabafedbf247a632d16cffba325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Camera
-  player: {fileID: 1473803945}
+  player: {fileID: 1191490438}
   baseMouseSensitivity: 2
   mouseSensitivity: 2
 --- !u!114 &873699394
@@ -1880,10 +1880,6 @@ MonoBehaviour:
   hitName: 
   hitObjectName: 
   inventaire: {fileID: 0}
-  isOnConcrete: 0
-  isOnHerbe: 0
-  isOnStone: 0
-  isOnWood: 0
 --- !u!1 &1473803944
 GameObject:
   m_ObjectHideFlags: 0
