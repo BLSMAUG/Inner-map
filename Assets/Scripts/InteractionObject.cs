@@ -25,7 +25,7 @@ public class InteractionObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OverturePorte(cle,porte);
+        //OverturePorte(cle,porte);
     }
     public void OverturePorte(GameObject cle, GameObject porte)
     {

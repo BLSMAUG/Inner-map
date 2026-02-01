@@ -125,6 +125,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OverturePorte(cle, porteSalle1);
+        //OverturePorte(cle, porteSalle1);
     }
 }
