@@ -1917,7 +1917,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 150a7bdf099c5b64ca9ddb88127589de, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1317337500}
   m_SourcePrefab: {fileID: 100100000, guid: 150a7bdf099c5b64ca9ddb88127589de, type: 3}
 --- !u!1001 &63855949
 PrefabInstance:
@@ -28781,6 +28784,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c184036d9ee640b47b894a4783543f68, type: 3}
+--- !u!1 &1074846958 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 150a7bdf099c5b64ca9ddb88127589de, type: 3}
+  m_PrefabInstance: {fileID: 63843774}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1080341433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35400,6 +35408,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 150a7bdf099c5b64ca9ddb88127589de, type: 3}
   m_PrefabInstance: {fileID: 63843774}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1317337500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074846958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ea18748ecf72904eb5116bd4e44cfb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClassItem
+  itemName: Cle
+  itemDescription: 
+  itemIcon: {fileID: 0}
+  isReachable: 1
+  isCollectible: 1
+  isInInventory: 0
+  itemIndex: 0
 --- !u!1001 &1318080469
 PrefabInstance:
   m_ObjectHideFlags: 0
