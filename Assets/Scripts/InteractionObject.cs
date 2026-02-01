@@ -14,6 +14,7 @@ public class InteractionObject : MonoBehaviour
     public GameObject porte;
     [SerializeField]
     public GameObject cle;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,6 +40,8 @@ public class InteractionObject : MonoBehaviour
                     //Debug.Log("Ya la clé");
                     porte.transform.Rotate(0, 90, 0);
                     isOpened = true;
+                    //DoorAndKey.Play();
+
                 }
             }
         }

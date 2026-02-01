@@ -102,6 +102,14 @@ public class Inventaire : MonoBehaviour
             Crosshair.SetActive(false);
         }
     }
+
+    public void DeleteFromInventory(ClassItem objet)
+    {
+        inventaire.Remove(objet);
+        objet.isInInventory = false;
+        Destroy(Canva.GetChild(9).gameObject);
+    }
+        
     public void AddToInventory(string name)
     {
         Debug.Log("Started function");
