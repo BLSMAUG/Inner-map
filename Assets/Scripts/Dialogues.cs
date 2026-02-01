@@ -40,7 +40,7 @@ public class Dialogues : MonoBehaviour
     static public string[] MaskDialogue = new string[] { "The employee's body disintegrated and this mask took it's place.", "The mask looks like it could fit in that big door you saw earlier." }; //14
     static public string[] PickUpMaskDialogue = new string[] { "You have picked up the mask, it is now in your inventory." }; //15
     static public string[] CatchingNetDialogue = new string[] { "This catching net could let you reach a faraway object." }; //16
-    static public string[] FuseDialogue = new string[] { "This should be the fuse for the generator." }; //17
+    static public string[] FuseDialogue = new string[] { "This should be the fuse for the generator.", "It seems to be too far, you're gonna need something to reach it." }; //17
 
 
 
