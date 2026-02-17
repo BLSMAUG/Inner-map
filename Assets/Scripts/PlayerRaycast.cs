@@ -45,6 +45,7 @@ public class PlayerRaycast : MonoBehaviour
         InterractionDialogue();
         InterractKey();
         PickUpKey();
+        PorteInteraction();
     }
 
     //void FixedUpdate()
@@ -66,7 +67,8 @@ public class PlayerRaycast : MonoBehaviour
                 if (hitObject.isReachable == true && hitName=="Porte")
                 {
                     Debug.Log(hitName);
-                    GameManager.OverturePorte(GameManager.cle,GameManager.porteSalle1);
+                    //GameManager.porteSalle1 = hitName;
+                    GameManager.OverturePorte(GameManager.cle,hitObject.gameObject);
                 }
             }
         }

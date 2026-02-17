@@ -7,13 +7,17 @@ public class GameManager : MonoBehaviour
 {
 
     public static GameManager instance;
+    [SerializeField]
     static public GameObject porteSalle1;
+    [SerializeField]
     static public GameObject porte1Salle2;
+    [SerializeField]
     static public GameObject porte2Salle2;
     static public bool porte1isOpened=false;
     static public bool porte2isOpened=false;
     static public Transform tInventory;
     static public Inventaire canva;
+    [SerializeField]
     static public ClassItem cle;
     static public AudioSource DoorAndKey;
     public ClassItem epuisette;
@@ -46,8 +50,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         SetState(GameState.Playing);
-        porteSalle1=GameObject.Find("Porte");
-        cle = GameObject.Find("props_cle").GetComponent<ClassItem>();
+        //porteSalle1=GameObject.Find("Salle1Porte2");
+        cle = GameObject.Find("Cle1").GetComponent<ClassItem>();
     }
 
     public void SetState(GameState newState)
@@ -74,19 +78,17 @@ public class GameManager : MonoBehaviour
     static public void OverturePorte(ClassItem cle, GameObject porte)
     {
         if (Input.GetKeyDown(KeyCode.E))
-        { 
-            if (GameManager.porte1isOpened == false)
+        {
+            Debug.Log("E pressed");
+            if (cle.isInInventory == true)
             {
-                if (cle.isInInventory == true)
-                {
-                    //Debug.Log("Yalaklé");
-                    porte.transform.Rotate(0, 90, 0);
-                    porte1isOpened = true;
-                    DoorAndKey.Play();
-                    canva.inventaire.Remove(cle);
-                    cle.isInInventory = false;
-                    Destroy(tInventory.GetChild(9).gameObject);
-                }
+                Debug.Log("Yalaklé");
+                porte.transform.Rotate(0, 90, 0);
+                porte1isOpened = true;
+                DoorAndKey.Play();
+                canva.inventaire.Remove(cle);
+                cle.isInInventory = false;
+                Destroy(tInventory.GetChild(9).gameObject);
             }
         }
     }

@@ -784,6 +784,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &21865379
 MeshFilter:
@@ -895,6 +896,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &21900077
 MeshFilter:
@@ -1468,6 +1470,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &40086165
 MeshFilter:
@@ -1728,6 +1731,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &50359594
 MeshFilter:
@@ -1854,6 +1858,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &50483750
 MeshFilter:
@@ -1951,6 +1956,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &50950500
 MeshFilter:
@@ -2466,7 +2472,6 @@ MonoBehaviour:
   isReachable: 1
   isCollectible: 0
   isInInventory: 0
-  itemIndex: 3
 --- !u!65 &70430642
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2543,14 +2548,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74258732}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 3.81
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -2702,6 +2707,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &83200035
 MeshFilter:
@@ -2888,6 +2894,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &92430168
 MeshFilter:
@@ -3000,6 +3007,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &96687372
 MeshFilter:
@@ -3094,14 +3102,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 100816968}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -3253,6 +3261,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &101094105
 MeshFilter:
@@ -3436,6 +3445,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &122699472
 MeshFilter:
@@ -3530,14 +3540,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122931532}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -3647,14 +3657,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133510679}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8207547, g: 0.66771847, b: 0.10453009, a: 1}
   m_Intensity: 27035
   m_Range: 160.5
   m_SpotAngle: 87.51109
   m_InnerSpotAngle: 55.688892
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -3799,14 +3809,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147653532}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 200000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -3911,14 +3921,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148547935}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -4152,6 +4162,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &157923827
 MeshFilter:
@@ -4555,7 +4566,6 @@ MonoBehaviour:
   isReachable: 0
   isCollectible: 1
   isInInventory: 0
-  itemIndex: 0
 --- !u!4 &180186706 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 4c397614d6259e543abcad0c5ab7294a, type: 3}
@@ -4811,6 +4821,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &189102092
 MeshFilter:
@@ -5067,14 +5078,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 201674176}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -5194,14 +5205,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 206460477}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -5338,6 +5349,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &209534900
 MeshFilter:
@@ -5449,6 +5461,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &211846545
 MeshFilter:
@@ -5649,14 +5662,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219828554}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -5892,6 +5905,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &222990801
 MeshFilter:
@@ -6007,14 +6021,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 229655854}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 150000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -6215,14 +6229,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236914736}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -6443,14 +6457,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 239405827}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -6593,6 +6607,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &251069344
 MeshFilter:
@@ -7304,6 +7319,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &271180481
 MeshFilter:
@@ -7416,6 +7432,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &274348163
 MeshFilter:
@@ -7492,7 +7509,6 @@ MonoBehaviour:
   isReachable: 1
   isCollectible: 1
   isInInventory: 0
-  itemIndex: 3
 --- !u!65 &275039918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7569,14 +7585,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284009919}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8018868, g: 0.6415097, b: 0.18534178, a: 1}
   m_Intensity: 100000
   m_Range: 84
   m_SpotAngle: 90.85983
   m_InnerSpotAngle: 67.461136
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -7729,6 +7745,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &284623970
 MeshFilter:
@@ -8001,14 +8018,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287029251}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -8282,14 +8299,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292885590}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -8490,14 +8507,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 293712039}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 150000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -8736,6 +8753,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &299242171
 MeshFilter:
@@ -8833,6 +8851,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &299584510
 MeshFilter:
@@ -9202,6 +9221,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &317520413
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -9247,6 +9267,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 49888f57945fabc4a8dccfb0a747c727, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9256,7 +9277,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &317520414
 Transform:
@@ -9822,6 +9842,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &337236572
 MeshFilter:
@@ -10002,14 +10023,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 349846049}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -10147,6 +10168,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &351803479
 MeshFilter:
@@ -10258,6 +10280,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &353361643
 MeshFilter:
@@ -10458,14 +10481,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356936356}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 30000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -10617,6 +10640,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &357557092
 MeshFilter:
@@ -11025,6 +11049,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &362933183
 MeshFilter:
@@ -11151,6 +11176,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &372767117
 MeshFilter:
@@ -11248,6 +11274,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &373873560
 MeshFilter:
@@ -11457,6 +11484,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &381012846
 MeshFilter:
@@ -11568,6 +11596,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &382103780
 MeshFilter:
@@ -11780,6 +11809,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &386472282
 MeshFilter:
@@ -11874,14 +11904,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386657979}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -12033,6 +12063,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &391879649
 MeshFilter:
@@ -12241,6 +12272,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &398745010
 MeshFilter:
@@ -12579,6 +12611,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &401714410
 MeshFilter:
@@ -12691,6 +12724,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &402900460
 MeshFilter:
@@ -13150,6 +13184,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &419818428
 MeshFilter:
@@ -13261,6 +13296,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &423336801
 MeshFilter:
@@ -13355,14 +13391,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 426020434}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -13874,6 +13910,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &436828507
 MeshFilter:
@@ -14237,6 +14274,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &452536526
 MeshFilter:
@@ -14630,14 +14668,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 502066410}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8679245, g: 0.69001704, b: 0.12691349, a: 1}
   m_Intensity: 8637365
   m_Range: 576.2
   m_SpotAngle: 54.689655
   m_InnerSpotAngle: 27.974491
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -14772,14 +14810,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 505865975}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 50000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -14916,6 +14954,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &506688148
 MeshFilter:
@@ -15139,6 +15178,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &518604906
 MeshFilter:
@@ -15332,6 +15372,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &525398934
 MeshFilter:
@@ -15846,6 +15887,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &547133550
 MeshFilter:
@@ -15925,14 +15967,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 547269862}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -16251,6 +16293,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &560228171
 MeshFilter:
@@ -16345,14 +16388,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 566188339}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -16504,6 +16547,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &566671945
 MeshFilter:
@@ -16768,6 +16812,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &577222052
 MeshFilter:
@@ -16862,14 +16907,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579683537}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -17182,14 +17227,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 595091874}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 150000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -17364,6 +17409,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &599548835
 MeshFilter:
@@ -17568,6 +17614,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &630350566
 MeshFilter:
@@ -18022,14 +18069,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 647121570}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -18166,6 +18213,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &648200770
 MeshFilter:
@@ -18337,14 +18385,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 662427974}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -18935,6 +18983,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &683855856
 MeshFilter:
@@ -19061,6 +19110,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &684098992
 MeshFilter:
@@ -19172,6 +19222,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &684854305
 MeshFilter:
@@ -19251,14 +19302,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 686645312}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -19511,6 +19562,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &690128665
 MeshFilter:
@@ -20190,14 +20242,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 726609088}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 30000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -20302,14 +20354,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 728165284}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 7472
   m_Range: 130
   m_SpotAngle: 114.653595
   m_InnerSpotAngle: 76.14353
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -20444,14 +20496,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 736884472}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -20588,6 +20640,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &737334416
 MeshFilter:
@@ -20682,14 +20735,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 739100460}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -20991,6 +21044,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &745500448
 MeshFilter:
@@ -21092,6 +21146,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &752638191
 MeshFilter:
@@ -21204,6 +21259,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &753862416
 MeshFilter:
@@ -21522,6 +21578,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &756046669
 MeshFilter:
@@ -21633,6 +21690,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &756231655
 MeshFilter:
@@ -21744,6 +21802,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &760840707
 MeshFilter:
@@ -22243,6 +22302,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &784721171
 MeshFilter:
@@ -22621,6 +22681,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &800975937
 MeshFilter:
@@ -22700,14 +22761,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808276932}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -23200,6 +23261,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &825895892
 MeshFilter:
@@ -23317,6 +23379,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &832646992
 MeshFilter:
@@ -23396,14 +23459,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 833679881}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -23839,6 +23902,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &842920451
 MeshFilter:
@@ -23933,14 +23997,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 845227690}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -24156,6 +24220,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &855897157
 MeshFilter:
@@ -24805,6 +24870,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &874153409
 MeshFilter:
@@ -25101,6 +25167,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &883697943
 MeshFilter:
@@ -25402,14 +25469,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894597548}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 50000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -25529,14 +25596,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 894755818}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -25774,6 +25841,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &900027862
 MeshFilter:
@@ -26062,6 +26130,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &912707466
 MeshFilter:
@@ -26511,14 +26580,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 940813533}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -26840,14 +26909,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961202357}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -26985,6 +27054,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &965512921
 MeshFilter:
@@ -27194,6 +27264,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &969054076
 MeshFilter:
@@ -27385,6 +27456,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &973938669
 MeshFilter:
@@ -27576,14 +27648,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 987527916}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -27937,14 +28009,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1009851052}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -28124,14 +28196,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1014099076}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 100000
   m_Range: 221
   m_SpotAngle: 120.60105
   m_InnerSpotAngle: 115.92131
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -28299,6 +28371,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1017468889
 MeshFilter:
@@ -28682,6 +28755,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1027458467
 MeshFilter:
@@ -28862,14 +28936,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1034408616}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 50000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -29326,6 +29400,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1054495243
 MeshFilter:
@@ -29453,6 +29528,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1055367339
 MeshFilter:
@@ -29914,6 +29990,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1090107211
 MeshFilter:
@@ -30228,14 +30305,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103551894}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -30889,10 +30966,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59a6833e9ef32674b8c187b372a26091, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Dialogues
-  dialogueBox: {fileID: 5812210}
-  enterKey: {fileID: 437797126}
-  textField: {fileID: 819667432}
-  click_dialogue: {fileID: 5812211}
 --- !u!114 &1140489402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31113,14 +31186,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1149011200}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -31272,6 +31345,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1152621797
 MeshFilter:
@@ -31398,6 +31472,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1155914321
 MeshFilter:
@@ -31495,6 +31570,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1160038112
 MeshFilter:
@@ -31621,6 +31697,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1165833813
 MeshFilter:
@@ -31780,6 +31857,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1170664398
 MeshFilter:
@@ -31891,6 +31969,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1175517430
 MeshFilter:
@@ -32210,6 +32289,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1182314753
 MeshFilter:
@@ -32402,6 +32482,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1188398278
 MeshFilter:
@@ -32582,14 +32663,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191607411}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -32943,6 +33024,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1198126808
 MeshFilter:
@@ -33181,14 +33263,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1205970488}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 50000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -33506,14 +33588,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222619583}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 200000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -33881,14 +33963,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237786219}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8207547, g: 0.66771847, b: 0.10453009, a: 1}
   m_Intensity: 40201
   m_Range: 133
   m_SpotAngle: 96.26214
   m_InnerSpotAngle: 82.49514
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -34350,14 +34432,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254047160}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -34477,14 +34559,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255345572}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 40000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -34818,6 +34900,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1260392935
 MeshFilter:
@@ -34920,6 +35003,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1261840552
 MeshFilter:
@@ -35202,14 +35286,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272298259}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -35329,14 +35413,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1273891064}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 150000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -35975,6 +36059,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1304870800
 MeshFilter:
@@ -36168,6 +36253,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1310884402
 MeshFilter:
@@ -36321,7 +36407,6 @@ MonoBehaviour:
   isReachable: 1
   isCollectible: 1
   isInInventory: 0
-  itemIndex: 12
 --- !u!65 &1317337501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36390,6 +36475,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1001 &1318080469
 PrefabInstance:
@@ -36653,14 +36739,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335542900}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8679245, g: 0.69001704, b: 0.12691349, a: 1}
   m_Intensity: 8637365
   m_Range: 576.2
   m_SpotAngle: 54.689655
   m_InnerSpotAngle: 27.974491
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -36919,6 +37005,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1336378349
 MeshFilter:
@@ -37112,6 +37199,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1341601639
 MeshFilter:
@@ -37577,14 +37665,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355133985}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8018868, g: 0.6415097, b: 0.18534178, a: 1}
   m_Intensity: 10000
   m_Range: 153
   m_SpotAngle: 104.89905
   m_InnerSpotAngle: 61.724144
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -37742,6 +37830,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1365915753
 MeshFilter:
@@ -38154,6 +38243,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1377698137
 MeshFilter:
@@ -38175,14 +38265,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af52394a1a7df0246bb95285263d1f3f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycast1
-  playerReach: 10
-  hitName: 
-  hitObjectName: 
-  inventaire: {fileID: 1499015920}
-  isOnConcrete: 0
-  isOnHerbe: 0
-  isOnStone: 0
-  isOnWood: 0
 --- !u!1 &1380664706
 GameObject:
   m_ObjectHideFlags: 0
@@ -38345,6 +38427,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1382657545
 MeshFilter:
@@ -38461,6 +38544,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1397122669
 MeshFilter:
@@ -38573,6 +38657,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1400268303
 MeshFilter:
@@ -38684,6 +38769,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1407183989
 MeshFilter:
@@ -39056,14 +39142,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411402883}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8207547, g: 0.66771847, b: 0.10453009, a: 1}
   m_Intensity: 10000
   m_Range: 100
   m_SpotAngle: 96.26214
   m_InnerSpotAngle: 82.49514
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -39664,6 +39750,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1422229388
 MeshFilter:
@@ -39889,6 +39976,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1424793721
 MeshFilter:
@@ -40156,14 +40244,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438384738}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -40482,6 +40570,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1443917059
 MeshFilter:
@@ -40608,6 +40697,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1448537476
 MeshFilter:
@@ -40815,6 +40905,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1456858026
 MeshFilter:
@@ -41550,6 +41641,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1486865760
 MeshFilter:
@@ -41629,14 +41721,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487623548}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8207547, g: 0.66771847, b: 0.10453009, a: 1}
   m_Intensity: 10000
   m_Range: 100
   m_SpotAngle: 96.26214
   m_InnerSpotAngle: 82.49514
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -41771,14 +41863,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1497104306}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -42038,14 +42130,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501090865}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -42465,14 +42557,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514350286}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.7924528, g: 0.6453327, b: 0.16073336, a: 1}
   m_Intensity: 1365.6
   m_Range: 67.56
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -42612,14 +42704,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522292102}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -42810,14 +42902,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532860455}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -43046,6 +43138,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1540317193
 MeshFilter:
@@ -43235,6 +43328,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1545590935
 MeshFilter:
@@ -43347,6 +43441,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1552047920
 MeshFilter:
@@ -43623,14 +43718,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1554798519}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -43816,14 +43911,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1558096524}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8679245, g: 0.69001704, b: 0.12691349, a: 1}
   m_Intensity: 1879319
   m_Range: 576.2
   m_SpotAngle: 72.04346
   m_InnerSpotAngle: 37.06644
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -43975,6 +44070,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1558643407
 MeshFilter:
@@ -44091,6 +44187,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1567564496
 MeshFilter:
@@ -44303,6 +44400,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1572855827
 MeshFilter:
@@ -44798,14 +44896,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1589642109}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 30000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -45291,6 +45389,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1608392888
 MeshFilter:
@@ -45388,6 +45487,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1610034242
 MeshFilter:
@@ -45568,14 +45668,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1616675555}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -45839,6 +45939,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1625884079
 MeshFilter:
@@ -45918,14 +46019,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1628037527}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -46055,6 +46156,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1628977463
 MeshFilter:
@@ -46166,6 +46268,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1631290532
 MeshFilter:
@@ -46268,6 +46371,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1637563538
 MeshFilter:
@@ -46457,6 +46561,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1642541960
 MeshFilter:
@@ -46770,6 +46875,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1646513704
 MeshFilter:
@@ -46864,14 +46970,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646891719}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -47183,6 +47289,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1651949704
 MeshFilter:
@@ -47406,6 +47513,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1659429340
 MeshFilter:
@@ -47623,6 +47731,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1666967996
 MeshFilter:
@@ -48055,6 +48164,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1690731214
 MeshFilter:
@@ -48241,6 +48351,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1692545272
 MeshFilter:
@@ -48454,6 +48565,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1696013367
 MeshFilter:
@@ -48850,6 +48962,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1708155968
 MeshFilter:
@@ -49111,14 +49224,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714893357}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8207547, g: 0.66771847, b: 0.10453009, a: 1}
   m_Intensity: 40341
   m_Range: 100
   m_SpotAngle: 87.51109
   m_InnerSpotAngle: 62.848892
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -49387,6 +49500,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1723518676
 MeshFilter:
@@ -49734,14 +49848,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739156202}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -49861,14 +49975,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740859795}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -50054,14 +50168,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1750110408}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -50289,6 +50403,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1761418657
 MeshFilter:
@@ -50490,6 +50605,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1767166498
 MeshFilter:
@@ -50682,6 +50798,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1774055976
 MeshFilter:
@@ -50784,6 +50901,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1783505533
 MeshFilter:
@@ -50900,6 +51018,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1790065803
 MeshFilter:
@@ -51157,14 +51276,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1796759426}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 2
   m_Color: {r: 0.7924528, g: 0.6453327, b: 0.16073336, a: 1}
   m_Intensity: 9999
   m_Range: 39.5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -51418,6 +51537,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1813084033
 MeshFilter:
@@ -51512,14 +51632,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1818034019}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -51657,6 +51777,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1829184988
 MeshFilter:
@@ -51852,14 +51973,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835586626}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 250000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -52073,6 +52194,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1853058508
 MeshFilter:
@@ -52167,14 +52289,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859125770}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -52312,6 +52434,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1860688869
 MeshFilter:
@@ -52406,14 +52529,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861494964}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 100000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -52518,14 +52641,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1866459892}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8962264, g: 0.71302706, b: 0.20714669, a: 1}
   m_Intensity: 26634
   m_Range: 130
   m_SpotAngle: 179
   m_InnerSpotAngle: 128.79059
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -52660,14 +52783,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868023057}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -52885,6 +53008,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1875160561
 MeshFilter:
@@ -53077,6 +53201,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1894612610
 MeshFilter:
@@ -53454,14 +53579,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921021274}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 100000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -53796,6 +53921,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1924055423
 MeshFilter:
@@ -54114,6 +54240,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1937549523
 MeshFilter:
@@ -54208,14 +54335,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937621151}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -54353,6 +54480,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1944210119
 MeshFilter:
@@ -54703,14 +54831,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957680141}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.8679245, g: 0.69001704, b: 0.12691349, a: 1}
   m_Intensity: 8637365
   m_Range: 576.2
   m_SpotAngle: 72.04346
   m_InnerSpotAngle: 37.06644
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -54863,6 +54991,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1959348821
 MeshFilter:
@@ -54974,6 +55103,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1959982675
 MeshFilter:
@@ -55195,6 +55325,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1964725496
 MeshFilter:
@@ -55306,6 +55437,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1966384713
 MeshFilter:
@@ -55433,6 +55565,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1967262678
 MeshFilter:
@@ -55699,14 +55832,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981526185}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 50000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -55863,6 +55996,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2000008197
 MeshFilter:
@@ -55960,6 +56094,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2001741118
 MeshFilter:
@@ -56193,6 +56328,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2002561367
 MeshFilter:
@@ -56491,6 +56627,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2017791231
 MeshFilter:
@@ -56865,6 +57002,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2037171073
 MeshFilter:
@@ -56976,6 +57114,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2039806206
 MeshFilter:
@@ -57088,6 +57227,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2040303287
 MeshFilter:
@@ -57391,14 +57531,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062853927}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 150000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -57652,6 +57792,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2064503684
 MeshFilter:
@@ -57731,14 +57872,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067739903}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.12259703, g: 0.1999599, b: 0.8962264, a: 1}
   m_Intensity: 150000
   m_Range: 300
   m_SpotAngle: 82.45116
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -57875,6 +58016,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2074611928
 MeshFilter:
@@ -58066,14 +58208,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2079902043}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 50000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -58225,6 +58367,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2080250380
 MeshFilter:
@@ -58322,6 +58465,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2084625460
 MeshFilter:
@@ -58434,6 +58578,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2085643754
 MeshFilter:
@@ -58515,6 +58660,7 @@ GameObject:
   - component: {fileID: 2101164696}
   - component: {fileID: 2101164698}
   - component: {fileID: 2101164697}
+  - component: {fileID: 2101164699}
   m_Layer: 0
   m_Name: Porte
   m_TagString: Objet
@@ -58556,7 +58702,6 @@ MonoBehaviour:
   isReachable: 1
   isCollectible: 0
   isInInventory: 0
-  itemIndex: 0
 --- !u!65 &2101164698
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -58578,6 +58723,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 24.605694, y: 201.79903, z: 113.704384}
   m_Center: {x: -7.301284, y: 8.191785, z: 53.510006}
+--- !u!54 &2101164699
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101164695}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2107578842
 GameObject:
   m_ObjectHideFlags: 0
@@ -58702,6 +58874,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2112875156
 MeshFilter:
@@ -58813,6 +58986,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2118362843
 MeshFilter:
@@ -58940,6 +59114,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2123069566
 MeshFilter:
@@ -59269,14 +59444,14 @@ Light:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127009535}
   m_Enabled: 1
-  serializedVersion: 11
+  serializedVersion: 12
   m_Type: 0
   m_Color: {r: 0.20799215, g: 0.26512274, b: 0.7735849, a: 1}
   m_Intensity: 200000
   m_Range: 416.64
   m_SpotAngle: 68.04886
   m_InnerSpotAngle: 0
-  m_CookieSize: 10
+  m_CookieSize2D: {x: 10, y: 10}
   m_Shadows:
     m_Type: 0
     m_Resolution: -1
@@ -59587,6 +59762,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2131779319
 MeshFilter:
@@ -59900,6 +60076,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &2140311334
 MeshFilter:
