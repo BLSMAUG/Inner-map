@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using NUnit.Framework;
 using Unity.VisualScripting;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
 using static UnityEditor.Progress;
@@ -20,7 +21,7 @@ public class Inventaire : MonoBehaviour
     public List<GameObject> objects = new List<GameObject>();
 
     private ClassItem classItem;
-    private int nextFreeSlot = 0;
+    public static int nextFreeSlot = 0;
 
     [SerializeField]
     private GameObject ItemPrefab;
@@ -29,11 +30,11 @@ public class Inventaire : MonoBehaviour
     private GameObject Crosshair;
 
     [SerializeField]
-    private Transform Canva;
+    public Transform Canva;
 
     //POUR TESTER: a mettre en commentaire plus tard
     [SerializeField]
-    private GameObject itemVisé;
+    private GameObject itemVise;
 
     [SerializeField]
     public GameObject eKey;
@@ -105,6 +106,7 @@ public class Inventaire : MonoBehaviour
 
     public void DeleteFromInventory(ClassItem objet)
     {
+        Debug.Log("Deleting...");
         inventaire.Remove(objet);
         objet.isInInventory = false;
         Destroy(Canva.GetChild(9).gameObject);
@@ -116,20 +118,20 @@ public class Inventaire : MonoBehaviour
         for (int i = 0; i < objects.Count; i++)
         {
             ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
-            Debug.Log(i);
-            Debug.Log(objects.Count);
+            // Debug.Log(i);
+            // Debug.Log(objects.Count);
             if (objectClassItem.itemName == name)
             {
-                Debug.Log("Ivent "+ inventaire.Count);
-                Debug.Log("slot " + slotCount);
+                // Debug.Log("Ivent "+ inventaire.Count);
+                // Debug.Log("slot " + slotCount);
 
 
                 if (inventaire.Count < slotCount)
                 {
                     //Destroy(GameObject.Find(itemName));
-                    Debug.Log(objectClassItem.itemName+"YES");
+                    // Debug.Log(objectClassItem.itemName+"YES");
                     inventaire.Add(objectClassItem);
-                    //Créer objet sprite à partir du sprite stocké dan sl'objet
+                    //Crï¿½er objet sprite ï¿½ partir du sprite stockï¿½ dan sl'objet
                     GameObject icone = Instantiate(ItemPrefab, Canva);
                     icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
                     icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;
@@ -148,7 +150,7 @@ public class Inventaire : MonoBehaviour
         //if (inventaire.Count < slotCount)
         //{ 
         //    inventaire.Add(objectClassItem);
-        //    //Créer objet sprite à partir du sprite stocké dan sl'objet
+        //    //Crï¿½er objet sprite ï¿½ partir du sprite stockï¿½ dan sl'objet
         //    GameObject icone = Instantiate(ItemPrefab, Canva);
         //    icone.GetComponent<Image>().sprite = objectClassItem.itemIcon;
         //    icone.GetComponent<RectTransform>().anchoredPosition = slots[nextFreeSlot].GetComponent<RectTransform>().anchoredPosition;

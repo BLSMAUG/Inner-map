@@ -19,6 +19,8 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         volumeSlider.value = PlayerPrefs.GetFloat("volume");
+        isPaused = false;
+        FirstPersonCamera.isInGame = true;
     }
 
 
@@ -27,14 +29,13 @@ public class PauseMenu : MonoBehaviour
         // Si le joueur appuis sur Echap alors la valeur de isPaused devient le contraire.
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isPaused = !isPaused;
+            isPaused = true;
             PauseGame();
         }
-
         //else
         //pauseMenuObject.SetActive(false);
         //Time.timeScale = 1.0f; // Le temps reprend
-
+        Debug.Log(isPaused);
 
     }
 
@@ -53,10 +54,11 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
+        Debug.Log("CLIK");
         pauseMenuObject.SetActive(false);
         optionsMenuObject.SetActive(false);
         //Time.timeScale = 1.0f;
-        isPaused = !isPaused;
+        isPaused = false;
         FirstPersonCamera.isInGame = true;
     }
 
@@ -70,6 +72,7 @@ public class PauseMenu : MonoBehaviour
         //Time.timeScale = 1.0f;
         isPaused = false;
         SceneManager.LoadScene(0);
+        FirstPersonCamera.isInGame = false;
     }
 
     public void QuitMenu()

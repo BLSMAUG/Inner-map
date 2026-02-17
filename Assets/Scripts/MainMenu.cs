@@ -73,7 +73,7 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene(1);
         FirstPersonCamera.isInGame = true;
         gameStart = true;
-        //Modifier pour qu'on revienne à l'état de base ?
+        //Modifier pour qu'on revienne ï¿½ l'ï¿½tat de base ?
     }
 
     public void QuitGame()

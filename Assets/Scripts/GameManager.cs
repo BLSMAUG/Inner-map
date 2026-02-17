@@ -13,8 +13,8 @@ public class GameManager : MonoBehaviour
     static public GameObject porte1Salle2;
     [SerializeField]
     static public GameObject porte2Salle2;
-    static public bool porte1isOpened=false;
-    static public bool porte2isOpened=false;
+    // static public bool porte1isOpened=false;
+    // static public bool porte2isOpened=false;
     static public Transform tInventory;
     static public Inventaire canva;
     [SerializeField]
@@ -52,6 +52,8 @@ public class GameManager : MonoBehaviour
         SetState(GameState.Playing);
         //porteSalle1=GameObject.Find("Salle1Porte2");
         cle = GameObject.Find("Cle1").GetComponent<ClassItem>();
+        canva = GameObject.Find("Canvas").GetComponent<Inventaire>();
+        Debug.Log(canva);
     }
 
     public void SetState(GameState newState)
@@ -79,29 +81,34 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Debug.Log("E pressed");
+            // Debug.Log("E pressed");
             if (cle.isInInventory == true)
             {
-                Debug.Log("Yalaklé");
+                // Debug.Log("Yalaklï¿½");
+                canva.DeleteFromInventory(GameManager.cle);
                 porte.transform.Rotate(0, 90, 0);
-                porte1isOpened = true;
+                ClassItem pI = porte.GetComponent<ClassItem>();
+                pI.isInInventory = true;
                 DoorAndKey.Play();
-                canva.inventaire.Remove(cle);
-                cle.isInInventory = false;
-                Destroy(tInventory.GetChild(9).gameObject);
             }
         }
     }
 
-    public void OverturePorteDouble(GameObject porte1, GameObject porte2)
+    static public void OverturePorteDouble(GameObject porte)
     {
-        if (porte1isOpened == false)
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            //Debug.Log("Yalaklé");
-            porte1.transform.Rotate(0, 90, 0);
-            porte2.transform.Rotate(0, 90, 0);
-            porte1isOpened = true;
-            DoorAndKey.Play();
+            ClassItem pI = porte.GetComponent<ClassItem>();
+            GameObject porte1 = porte.transform.GetChild(0).gameObject;
+            GameObject porte2 = porte.transform.GetChild(1).gameObject;;
+            if (pI.isInInventory == false)
+            {
+                //Debug.Log("Yalaklï¿½");
+                porte1.transform.Rotate(0, -90, 0);
+                porte2.transform.Rotate(0, 90, 0);
+                pI.isInInventory = true;
+                DoorAndKey.Play();
+            }
         }
     }
 
@@ -119,7 +126,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            //en vrai jsp si on fait ca avec le strucs de dialogue mais je mets ça au cas où
+            //en vrai jsp si on fait ca avec le strucs de dialogue mais je mets ï¿½a au cas oï¿½
         }
     }
 

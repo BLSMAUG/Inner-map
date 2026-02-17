@@ -37,7 +37,7 @@ public class InteractionObject : MonoBehaviour
                 ClassItem objectClassItem = cle.GetComponent<ClassItem>();
                 if (objectClassItem.isInInventory == true)
                 {
-                    //Debug.Log("Ya la clé");
+                    //Debug.Log("Ya la clï¿½");
                     porte.transform.Rotate(0, 90, 0);
                     isOpened = true;
                     //DoorAndKey.Play();

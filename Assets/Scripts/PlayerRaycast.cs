@@ -66,9 +66,15 @@ public class PlayerRaycast : MonoBehaviour
                 hitName = hitObject.itemName;
                 if (hitObject.isReachable == true && hitName=="Porte")
                 {
-                    Debug.Log(hitName);
+                    // Debug.Log(hitName);
                     //GameManager.porteSalle1 = hitName;
-                    GameManager.OverturePorte(GameManager.cle,hitObject.gameObject);
+                    GameManager.OverturePorte(GameManager.cle,hitInfo.collider.gameObject);
+                }
+                if (hitObject.isReachable == true && hitName=="Portedouble")
+                {
+                    // Debug.Log(hitName);
+                    //GameManager.porteSalle1 = hitName;
+                    GameManager.OverturePorteDouble(hitInfo.collider.gameObject);
                 }
             }
         }
@@ -97,6 +103,10 @@ public class PlayerRaycast : MonoBehaviour
                         Debug.Log(hitName);
                         Destroy(GameObject.Find(hitObjectName));
                         inventaire.AddToInventory(hitName);
+                        if (hitObject.itemDescription == "Cle")
+                        {
+                            GameManager.cle=hitObject;
+                        }
                     }
                 }
             }
@@ -120,21 +130,21 @@ public class PlayerRaycast : MonoBehaviour
 
             else if (hitInfo.collider.CompareTag("Herbe"))
             {
-                Debug.Log("Herbe");
+                // Debug.Log("Herbe");
                 isOnHerbe = true;
                 //currentGround = PlayerMovement.GroundType.Herbe;
             }
 
             else if (hitInfo.collider.CompareTag("Stone"))
             {
-                Debug.Log("Stone");
+                // Debug.Log("Stone");
                 isOnStone = true;
                 //currentGround = PlayerMovement.GroundType.Stone;
             }
 
             else if (hitInfo.collider.CompareTag("Wood"))
             {
-                Debug.Log("Stone");
+                // Debug.Log("Stone");
                 isOnWood = true;
                 //currentGround = PlayerMovement.GroundType.Wood;
             }
