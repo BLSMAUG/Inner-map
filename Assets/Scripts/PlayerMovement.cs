@@ -20,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private AudioClip footstepWoodLoopClip;
 
-    //[SerializeField]
-    //private AudioClip footstepSound;
+    [SerializeField]
+    private AudioClip footstepSound;
 
     //public enum GroundType
     //{
@@ -87,48 +87,48 @@ public class PlayerMovement : MonoBehaviour
         //    return;
         //}
 
-        //AudioClip clipToPlay = null;
+        AudioClip clipToPlay = null;
 
-        //if (isTryingToMove)
-        //{
-        //    if (playerRaycast.isOnConcrete)
-        //    {
-        //        clipToPlay = footstepConcreteLoopClip;
-        //    }
-        //    else if (playerRaycast.isOnHerbe)
-        //    {
-        //        clipToPlay = footstepHerbeLoopClip;
-        //    }
-        //    else if (playerRaycast.isOnStone)
-        //    {
-        //        clipToPlay = footstepStoneLoopClip;
-        //    }
-        //    else if (playerRaycast.isOnWood)
-        //    {
-        //        clipToPlay = footstepWoodLoopClip;
-        //    }
-        //}
+        if (isTryingToMove)
+        {
+            if (playerRaycast.isOnConcrete)
+            {
+                clipToPlay = footstepConcreteLoopClip;
+            }
+            else if (playerRaycast.isOnHerbe)
+            {
+                clipToPlay = footstepHerbeLoopClip;
+            }
+            else if (playerRaycast.isOnStone)
+            {
+                clipToPlay = footstepStoneLoopClip;
+            }
+            else if (playerRaycast.isOnWood)
+            {
+                clipToPlay = footstepWoodLoopClip;
+            }
+        }
 
-        //if (clipToPlay != null)
-        //{
-        //    if (!isFootstepPlaying)
-        //    {
-        //        AudioManager.instance.PlayLoopSFX(clipToPlay);
-        //        isFootstepPlaying = true;
-        //        Debug.Log("SON MARCHE");
-        //    }
+        if (clipToPlay != null)
+        {
+            if (!isFootstepPlaying)
+            {
+                AudioManager.instance.PlayLoopSFX(clipToPlay);
+                isFootstepPlaying = true;
+                Debug.Log("SON MARCHE");
+            }
 
-        //}
+        }
 
-        //else
-        //{
-        //    if (isFootstepPlaying)
-        //    {
-        //        AudioManager.instance.StopLoopSFX();
-        //        isFootstepPlaying= false;
-        //        Debug.Log("SON MARCHE PAS");
-        //    }
-        //}
+        else
+        {
+            if (isFootstepPlaying)
+            {
+                AudioManager.instance.StopLoopSFX();
+                isFootstepPlaying = false;
+                Debug.Log("SON MARCHE PAS");
+            }
+        }
 
         if (AudioManager.instance == null || footstepConcreteLoopClip == null)
         {
