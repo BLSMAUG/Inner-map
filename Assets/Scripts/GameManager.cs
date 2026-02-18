@@ -1,7 +1,5 @@
-using Unity.VisualScripting;
+
 using UnityEngine;
-using UnityEngine.Android;
-using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +16,7 @@ public class GameManager : MonoBehaviour
     static public Transform tInventory;
     static public Inventaire canva;
     [SerializeField]
-    static public ClassItem cle;
+    public ClassItem cle;
     static public AudioSource DoorAndKey;
     public ClassItem epuisette;
 
@@ -85,7 +83,7 @@ public class GameManager : MonoBehaviour
             if (cle.isInInventory == true)
             {
                 // Debug.Log("Yalakl�");
-                canva.DeleteFromInventory(GameManager.cle);
+                canva.DeleteFromInventory(cle);
                 porte.transform.Rotate(0, 90, 0);
                 ClassItem pI = porte.GetComponent<ClassItem>();
                 pI.isInInventory = true;

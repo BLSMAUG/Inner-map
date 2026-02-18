@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class AudioManager : MonoBehaviour
 {
@@ -16,19 +15,19 @@ public class AudioManager : MonoBehaviour
     public float musicVolume;
     public float sfxVolume;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
+    //private void Awake()
+    //{
+    //    if (instance == null)
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(gameObject);
+    //    }
 
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
+    //    else
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //}
 
     private void Start()
     {

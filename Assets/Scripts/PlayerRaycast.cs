@@ -1,9 +1,5 @@
-using System;
-using Unity.VisualScripting;
-using UnityEditor.PackageManager;
+
 using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.UIElements;
 
 public class PlayerRaycast : MonoBehaviour
 {
@@ -11,6 +7,7 @@ public class PlayerRaycast : MonoBehaviour
     public string hitName;
     public string hitObjectName;
     public Inventaire inventaire;
+    public GameManager gameManager;
 
     static public bool eKeyState = false;
     static public bool fKeyState = false;
@@ -68,7 +65,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     // Debug.Log(hitName);
                     //GameManager.porteSalle1 = hitName;
-                    GameManager.OverturePorte(GameManager.cle,hitInfo.collider.gameObject);
+                    GameManager.OverturePorte(gameManager.cle,hitInfo.collider.gameObject);
                 }
                 if (hitObject.isReachable == true && hitName=="Portedouble")
                 {
@@ -100,13 +97,14 @@ public class PlayerRaycast : MonoBehaviour
                     hitName = hitObject.itemName;
                     if (hitObject.isReachable == true && hitObject.isCollectible==true)
                     {
+                        if (hitObject.itemDescription == "Cle")
+                        {
+                            gameManager.cle = hitObject;
+                        }
                         Debug.Log(hitName);
                         Destroy(GameObject.Find(hitObjectName));
                         inventaire.AddToInventory(hitName);
-                        if (hitObject.itemDescription == "Cle")
-                        {
-                            GameManager.cle=hitObject;
-                        }
+                        
                     }
                 }
             }
@@ -172,7 +170,8 @@ public class PlayerRaycast : MonoBehaviour
                     {
                         Dialogues.currentDialogue = ClassItem.hitIndex;
                         //Debug.Log(Dialogues.currentDialogue);
-                        //Dialogues.isInDialogue = true;
+                        Dialogues.isInDialogue = true;
+                        //Dialogues.Dialogue(0);
 
                     }
                     break;

@@ -1,7 +1,5 @@
-using System.Linq;
+
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,7 +10,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuObject;
     public GameObject optionsMenuObject;
     [SerializeField]
-    public AudioSource clickSound;
+    private AudioSource clickSound;
     [SerializeField]
     public Slider volumeSlider;
 
@@ -35,7 +33,7 @@ public class PauseMenu : MonoBehaviour
         //else
         //pauseMenuObject.SetActive(false);
         //Time.timeScale = 1.0f; // Le temps reprend
-        Debug.Log(isPaused);
+        //Debug.Log(FirstPersonCamera.isInGame);
 
     }
 
@@ -54,7 +52,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("CLIK");
+        //Debug.Log("CLIK");
         pauseMenuObject.SetActive(false);
         optionsMenuObject.SetActive(false);
         //Time.timeScale = 1.0f;

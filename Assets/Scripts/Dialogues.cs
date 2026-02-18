@@ -1,6 +1,5 @@
-using Unity.VisualScripting;
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class Dialogues : MonoBehaviour
@@ -48,19 +47,25 @@ public class Dialogues : MonoBehaviour
     {
         //indexDialogue = 1;
         //ligneDialogue = DialogueList[currentDialogue][nextLine];
-        //Debug.Log(ligneDialogue);
+        Debug.Log(ligneDialogue);
+        MainMenu.gameStart = true;
 
         dialogueBox = GameObject.Find("Dialogue Box");
         enterKey = GameObject.Find("Enter Key");
+        textField = dialogueBox.transform.GetChild(0).gameObject;
+        GameObject objClick = GameObject.Find("OnClick");
+        click_dialogue= objClick.GetComponent<AudioSource>();
 
         StartDialogue();
     }
 
     void Update()
     {
+        //Debug.Log(MainMenu.gameStart);
         //LancerDialogue();
         //TestDialogue();
-        //Dialogue();
+
+        //Dialogue(nextLine);
     }
 
     static public void Dialogue(int currentDialogue)
@@ -78,7 +83,7 @@ public class Dialogues : MonoBehaviour
             textField.GetComponent<Text>().text = ligneDialogue;
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                //click_dialogue.Play();
+                click_dialogue.Play();
                 if (nextLine < DialogueList[currentDialogue].Length - 1)
                 {
                     nextLine += 1;
@@ -109,7 +114,7 @@ public class Dialogues : MonoBehaviour
             dialogueBox.SetActive(true);
             enterKey.SetActive(true);
             ligneDialogue = DialogueList[0][nextLine];
-            //Debug.Log(ligneDialogue);
+            Debug.Log(ligneDialogue);
             textField.GetComponent<Text>().text = ligneDialogue;
             if (Input.GetKeyDown(KeyCode.Return))
             {

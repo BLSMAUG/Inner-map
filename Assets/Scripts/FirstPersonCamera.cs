@@ -1,7 +1,4 @@
 using UnityEngine;
-using System.Collections.Generic;
-using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
 public class FirstPersonCamera : MonoBehaviour
 {

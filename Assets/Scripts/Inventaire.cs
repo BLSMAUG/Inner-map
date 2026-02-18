@@ -1,12 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
-using NUnit.Framework;
-using Unity.VisualScripting;
-using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
-using static UnityEngine.Rendering.VolumeComponent;
 
 public class Inventaire : MonoBehaviour
 {
@@ -110,26 +104,27 @@ public class Inventaire : MonoBehaviour
         inventaire.Remove(objet);
         objet.isInInventory = false;
         Destroy(Canva.GetChild(9).gameObject);
+        nextFreeSlot = nextFreeSlot - 1;
     }
         
     public void AddToInventory(string name)
     {
         Debug.Log("Started function");
-        for (int i = 0; i < objects.Count; i++)
+        foreach (GameObject element in objects)
         {
-            ClassItem objectClassItem = objects[i].GetComponent<ClassItem>();
-            // Debug.Log(i);
-            // Debug.Log(objects.Count);
+            ClassItem objectClassItem = element.GetComponent<ClassItem>();
+            //Debug.Log(element);
+            Debug.Log(objects.Count);
             if (objectClassItem.itemName == name)
             {
-                // Debug.Log("Ivent "+ inventaire.Count);
+                 Debug.Log("Ivent "+ inventaire.Count);
                 // Debug.Log("slot " + slotCount);
 
 
                 if (inventaire.Count < slotCount)
                 {
                     //Destroy(GameObject.Find(itemName));
-                    // Debug.Log(objectClassItem.itemName+"YES");
+                     Debug.Log(objectClassItem.itemName+"YES");
                     inventaire.Add(objectClassItem);
                     //Cr�er objet sprite � partir du sprite stock� dan sl'objet
                     GameObject icone = Instantiate(ItemPrefab, Canva);
