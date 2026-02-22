@@ -115,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.instance.PlayLoopSFX(clipToPlay);
                 isFootstepPlaying = true;
-                Debug.Log("SON MARCHE");
+                // Debug.Log("SON MARCHE");
             }
 
         }
@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 AudioManager.instance.StopLoopSFX();
                 isFootstepPlaying = false;
-                Debug.Log("SON MARCHE PAS");
+                // Debug.Log("SON MARCHE PAS");
             }
         }
 

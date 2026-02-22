@@ -10,7 +10,7 @@ public class Inventaire : MonoBehaviour
     [SerializeField]
     public List<GameObject> slots = new List<GameObject>();
     [SerializeField]
-    public List<ClassItem> inventaire = new List<ClassItem>();
+    public static List<ClassItem> inventaire = new List<ClassItem>();
     [SerializeField]
     public List<GameObject> objects = new List<GameObject>();
 
@@ -102,7 +102,17 @@ public class Inventaire : MonoBehaviour
     {
         Debug.Log("Deleting...");
         inventaire.Remove(objet);
-        objet.isInInventory = false;
+        foreach (GameObject element in objects)
+        {
+            ClassItem objectClassItem = element.GetComponent<ClassItem>();
+            //Debug.Log(element);
+            Debug.Log(objects.Count);
+            if (objectClassItem.itemName == name)
+            {
+                objet.isInInventory = false;
+                break;
+            }
+        }
         Destroy(Canva.GetChild(9).gameObject);
         nextFreeSlot = nextFreeSlot - 1;
     }
@@ -114,17 +124,17 @@ public class Inventaire : MonoBehaviour
         {
             ClassItem objectClassItem = element.GetComponent<ClassItem>();
             //Debug.Log(element);
-            Debug.Log(objects.Count);
+            // Debug.Log(objects.Count);
             if (objectClassItem.itemName == name)
             {
-                 Debug.Log("Ivent "+ inventaire.Count);
+                Debug.Log("Ivent "+ inventaire.Count);
                 // Debug.Log("slot " + slotCount);
 
-
+                
                 if (inventaire.Count < slotCount)
                 {
                     //Destroy(GameObject.Find(itemName));
-                     Debug.Log(objectClassItem.itemName+"YES");
+                    Debug.Log(objectClassItem.itemName+"YES");
                     inventaire.Add(objectClassItem);
                     //Cr�er objet sprite � partir du sprite stock� dan sl'objet
                     GameObject icone = Instantiate(ItemPrefab, Canva);
@@ -140,6 +150,7 @@ public class Inventaire : MonoBehaviour
 
             }
         }
+        
 
         //ClassItem objectClassItem = item.GetComponent<ClassItem>();
         //if (inventaire.Count < slotCount)

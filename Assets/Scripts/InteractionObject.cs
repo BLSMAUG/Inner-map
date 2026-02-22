@@ -29,7 +29,7 @@ public class InteractionObject : MonoBehaviour
     {
         if (isOpened == false)
         {
-            for (int i = 0; i < canva.inventaire.Count; i++)
+            for (int i = 0; i < Inventaire.inventaire.Count; i++)
             {
                 //Debug.Log(i);
                 ClassItem objectClassItem = cle.GetComponent<ClassItem>();

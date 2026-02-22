@@ -31,7 +31,7 @@ public class PlayerRaycast : MonoBehaviour
 
     void Start()
     {
-
+        gameManager=GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
 
@@ -65,7 +65,7 @@ public class PlayerRaycast : MonoBehaviour
                 {
                     // Debug.Log(hitName);
                     //GameManager.porteSalle1 = hitName;
-                    GameManager.OverturePorte(gameManager.cle,hitInfo.collider.gameObject);
+                    GameManager.OverturePorte(hitInfo.collider.gameObject);
                 }
                 if (hitObject.isReachable == true && hitName=="Portedouble")
                 {
@@ -105,6 +105,12 @@ public class PlayerRaycast : MonoBehaviour
                         Destroy(GameObject.Find(hitObjectName));
                         inventaire.AddToInventory(hitName);
                         
+                    }
+                    if (hitObject.isCollectible==true && hitObject.itemName == "Fusible")
+                    {
+                        Debug.Log(hitName);
+                        Destroy(GameObject.Find(hitObjectName));
+                        GameManager.TakeFusible(hitObject);
                     }
                 }
             }

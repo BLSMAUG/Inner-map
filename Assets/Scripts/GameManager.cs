@@ -1,5 +1,7 @@
 
+using Unity.VisualScripting.Dependencies.NCalc;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -18,7 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public ClassItem cle;
     static public AudioSource DoorAndKey;
-    public ClassItem epuisette;
+    [SerializeField]
+    public static ClassItem epuisette;
 
     public GameState currentState;
 
@@ -35,14 +38,14 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
 
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
+        // else
+        // {
+        //     Destroy(gameObject);
+        //     return;
+        // }
     }
     
     void Start()
@@ -51,7 +54,9 @@ public class GameManager : MonoBehaviour
         //porteSalle1=GameObject.Find("Salle1Porte2");
         cle = GameObject.Find("Cle1").GetComponent<ClassItem>();
         canva = GameObject.Find("Canvas").GetComponent<Inventaire>();
+        DoorAndKey=GameObject.Find("DoorAndKey").GetComponent<AudioSource>();
         Debug.Log(canva);
+        epuisette= GameObject.Find("Epuisette").GetComponent<ClassItem>();
     }
 
     public void SetState(GameState newState)
@@ -75,19 +80,41 @@ public class GameManager : MonoBehaviour
 
     }
 
-    static public void OverturePorte(ClassItem cle, GameObject porte)
+    // static public void OverturePorte(ClassItem cle, GameObject porte)
+    // {
+    //     if (Input.GetKeyDown(KeyCode.E))
+    //     {
+    //         Debug.Log("E pressed");
+    //         if (cle.isInInventory)
+    //         {
+    //             Debug.Log("Yalakl�");
+    //             canva.DeleteFromInventory(cle);
+    //             porte.transform.Rotate(0, 90, 0);
+    //             ClassItem pI = porte.GetComponent<ClassItem>();
+    //             pI.isInInventory = true;
+    //             DoorAndKey.Play();
+    //         }
+    //     }
+    // }
+
+    static public void OverturePorte(GameObject porte)
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            // Debug.Log("E pressed");
-            if (cle.isInInventory == true)
+            Debug.Log("E pressed");
+            foreach (ClassItem element in Inventaire.inventaire)
             {
-                // Debug.Log("Yalakl�");
-                canva.DeleteFromInventory(cle);
-                porte.transform.Rotate(0, 90, 0);
-                ClassItem pI = porte.GetComponent<ClassItem>();
-                pI.isInInventory = true;
-                DoorAndKey.Play();
+                //Debug.Log(element);
+                if (element.itemDescription == "Cle")
+                {
+                    canva.DeleteFromInventory(element);
+                    Debug.Log("Yalakl�");
+                    porte.transform.Rotate(0, 90, 0);
+                    ClassItem pI = porte.GetComponent<ClassItem>();
+                    pI.isInInventory = true;
+                    DoorAndKey.Play();
+                    break;
+                }
             }
         }
     }
@@ -106,6 +133,12 @@ public class GameManager : MonoBehaviour
                 porte2.transform.Rotate(0, 90, 0);
                 pI.isInInventory = true;
                 DoorAndKey.Play();
+                // BoxCollider bc = porte.GetComponent<BoxCollider>();
+                // Debug.Log(bc);
+                // Debug.Log(bc.isTrigger);
+                // bc.isTrigger = true;
+                // bc.enabled =false;
+                // Debug.Log(bc.isTrigger);
             }
         }
     }
@@ -115,7 +148,7 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.Playing;
     }
 
-    public void TakeFusible(ClassItem fusible)
+    static public void TakeFusible(ClassItem fusible)
     {
         if (epuisette.isInInventory==true)
         {

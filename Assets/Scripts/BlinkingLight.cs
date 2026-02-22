@@ -4,10 +4,10 @@ using UnityEngine;
 public class BlinkingLight : MonoBehaviour
 {
 
-    public float minIntensity;
-    public float maxIntensity;
+    public float minIntensity=500;
+    public float maxIntensity=25000;
     [SerializeField]
-    public int maxTime;
+    public int maxTime=5;
    
 
     public Light myLight;
@@ -26,7 +26,7 @@ public class BlinkingLight : MonoBehaviour
     }
     IEnumerator BlinkingLight1()
     {
-        Debug.Log("1");
+        // Debug.Log("1");
         int time = Random.Range(1, maxTime);
         yield return new WaitForSeconds(time);
         myLight.intensity = minIntensity;
@@ -36,7 +36,7 @@ public class BlinkingLight : MonoBehaviour
     }
     IEnumerator BlinkingLight2()
     {
-        Debug.Log("2");
+        // Debug.Log("2");
         yield return new WaitForSeconds(0.1f);
         myLight.intensity = maxIntensity;
 
