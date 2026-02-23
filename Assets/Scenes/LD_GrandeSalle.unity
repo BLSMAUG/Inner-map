@@ -28411,7 +28411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &886567361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68127,7 +68127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00e0834eaeb4de843adb283a8c0cca33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRaycast
-  playerReach: 30
+  playerReach: 50
   hitName: 
   hitObjectName: 
   inventaire: {fileID: 1810340123}
@@ -70384,6 +70384,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3642426572734376101, guid: 39068a4a462b478448b53603bb053fa7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012858712516451303, guid: 39068a4a462b478448b53603bb053fa7, type: 3}
+      propertyPath: isReachable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7397522515304229703, guid: 39068a4a462b478448b53603bb053fa7, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9030307729362851806, guid: 39068a4a462b478448b53603bb053fa7, type: 3}
