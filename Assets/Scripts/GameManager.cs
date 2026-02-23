@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public ClassItem cle;
     static public AudioSource DoorAndKey;
     [SerializeField]
-    public static ClassItem epuisette;
+    public ClassItem epuisette;
 
     public GameState currentState;
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
         canva = GameObject.Find("Canvas").GetComponent<Inventaire>();
         DoorAndKey=GameObject.Find("DoorAndKey").GetComponent<AudioSource>();
         Debug.Log(canva);
-        epuisette= GameObject.Find("Epuisette").GetComponent<ClassItem>();
+        // epuisette= GameObject.Find("Epuisette").GetComponent<ClassItem>();
     }
 
     public void SetState(GameState newState)
@@ -148,18 +148,18 @@ public class GameManager : MonoBehaviour
         return currentState == GameState.Playing;
     }
 
-    static public void TakeFusible(ClassItem fusible)
-    {
-        if (epuisette.isInInventory==true)
-        {
-            canva.AddToInventory(fusible.itemName);
-            canva.DeleteFromInventory(epuisette);
-        }
-        else
-        {
-            //en vrai jsp si on fait ca avec le strucs de dialogue mais je mets �a au cas o�
-        }
-    }
+    // static public void TakeFusible(ClassItem fusible)
+    // {
+    //     if (epuisette.isInInventory==true)
+    //     {
+    //         canva.AddToInventory(fusible.itemName);
+    //         canva.DeleteFromInventory(GameManager.epuisette);
+    //     }
+    //     else
+    //     {
+    //         //en vrai jsp si on fait ca avec le strucs de dialogue mais je mets �a au cas o�
+    //     }
+    // }
 
 
     // Update is called once per frame

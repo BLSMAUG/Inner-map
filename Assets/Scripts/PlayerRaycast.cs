@@ -95,13 +95,20 @@ public class PlayerRaycast : MonoBehaviour
                     hitObjectName = hitInfo.collider.gameObject.name;
                     ClassItem hitObject = hitInfo.collider.gameObject.GetComponent<ClassItem>();
                     hitName = hitObject.itemName;
-                    if (hitObject.isCollectible==true && hitObject.itemName == "Fusible")
+                    if (hitObject.itemName == "Fusible")
                     {
                         Debug.Log(hitName);
-                        GameManager.TakeFusible(hitObject);
-                        Destroy(GameObject.Find(hitObjectName));
+                        if (gameManager.epuisette.isInInventory==true)
+                        {
+                            inventaire.DeleteFromInventory(gameManager.epuisette);
+                            Destroy(GameObject.Find(hitObjectName));
+                            inventaire.AddToInventory(hitObject.itemName);  
+                        }
+
+                        // GameManager.TakeFusible(hitObject);
+                        // Destroy(GameObject.Find(hitObjectName));
                     }
-                    else if (hitObject.isReachable == true && hitObject.isCollectible==true)
+                    else if (hitObject.isReachable == true && hitObject.isCollectible==true&& hitObject.itemName != "Fusible")
                     {
                         if (hitObject.itemDescription == "Cle")
                         {
