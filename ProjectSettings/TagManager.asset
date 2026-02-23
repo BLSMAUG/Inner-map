@@ -5,11 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Objet
-  - Sword
   - Concrete
   - Herbe
   - Stone
   - Wood
+  - Generateur
   layers:
   - Default
   - TransparentFX

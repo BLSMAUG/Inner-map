@@ -101,7 +101,6 @@ public class Inventaire : MonoBehaviour
     public void DeleteFromInventory(ClassItem objet)
     {
         Debug.Log("Deleting...");
-        inventaire.Remove(objet);
         foreach (GameObject element in objects)
         {
             ClassItem objectClassItem = element.GetComponent<ClassItem>();
@@ -113,6 +112,7 @@ public class Inventaire : MonoBehaviour
                 break;
             }
         }
+        inventaire.Remove(objet);
         Destroy(Canva.GetChild(9).gameObject);
         nextFreeSlot = nextFreeSlot - 1;
     }

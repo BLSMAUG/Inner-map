@@ -20,7 +20,7 @@ public class PlayerRaycast : MonoBehaviour
     //[SerializeField] 
     //private LayerMask groundLayer;
 
-
+    public GameObject fusible;
     public bool isOnConcrete;
 
     public bool isOnHerbe;
@@ -28,7 +28,7 @@ public class PlayerRaycast : MonoBehaviour
     public bool isOnStone;
 
     public bool isOnWood;
-
+    public GameObject emplacementFusible;
     void Start()
     {
         gameManager=GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -43,12 +43,19 @@ public class PlayerRaycast : MonoBehaviour
         InterractKey();
         PickUpKey();
         PorteInteraction();
+        FusibleGenerateur();
     }
 
     //void FixedUpdate()
     //{
     //    Raycast();
     //}
+    // if (hitInfo.transform.tag == "Generateur" && fusible.GetComponent<ClassItem>().isInInventory==true)
+    // {
+    //     GameObject fusiblePlaced = Instantiate(fusible);
+    //     fusiblePlaced.GetComponent<RectTransform>().anchoredPosition = emplacementFusible.GetComponent<RectTransform>().anchoredPosition;
+    //     inventaire.DeleteFromInventory(fusible.GetComponent<ClassItem>());
+    // }
 
     public void PorteInteraction()
     {
@@ -72,6 +79,26 @@ public class PlayerRaycast : MonoBehaviour
                     // Debug.Log(hitName);
                     //GameManager.porteSalle1 = hitName;
                     GameManager.OverturePorteDouble(hitInfo.collider.gameObject);
+                }
+            }
+        }
+        
+    }
+    
+    public void FusibleGenerateur()
+    {
+        RaycastHit hitInfo;
+        Ray camRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(camRay, out hitInfo, playerReach))
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (hitInfo.transform.tag == "Generateur" && fusible.GetComponent<ClassItem>().isInInventory==true)
+                {
+                    Debug.Log("YES CA LARCGHE");
+                    GameObject fusiblePlaced = Instantiate(fusible);
+                    fusiblePlaced.GetComponent<Transform>().position = emplacementFusible.GetComponent<Transform>().position;
+                    inventaire.DeleteFromInventory(fusible.GetComponent<ClassItem>());
                 }
             }
         }
